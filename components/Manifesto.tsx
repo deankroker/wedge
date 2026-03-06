@@ -97,7 +97,7 @@ export default function Manifesto() {
     <section
       id="manifesto"
       className="py-32 px-6"
-      style={{ background: "var(--astra-200)" }}
+      style={{ background: "#fffdf9" }}
     >
       <div
         className="mx-auto flex flex-col gap-12"
