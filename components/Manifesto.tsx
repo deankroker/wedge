@@ -8,7 +8,7 @@ const paragraphs = [
     id: "p1",
     content: (
       <>
-        <ComputerIcon /> Perplexity Computer is a general-purpose digital worker
+        <ComputerIcon /> <strong>Perplexity Computer</strong> is a general-purpose digital worker
         that operates the same interfaces you do.
       </>
     ),

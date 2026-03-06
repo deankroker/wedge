@@ -8,7 +8,7 @@ const steps = [
     num: "01",
     title: "Give Computer tasks",
     description:
-      "Describe what you need in natural language. Computer understands complex, multi-step workflows — from research to code to deployment.",
+      "Prompt in natural language. Computer deploys subagents to handle the rest.",
     bgImage:
       "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-01.webp",
     screenshot:
@@ -18,7 +18,7 @@ const steps = [
     num: "02",
     title: "Computer works",
     description:
-      "Watch as Computer browses the web, writes code, connects APIs, and executes your workflow — autonomously running for hours or days.",
+      "Computer will browse, research, create, and connect your tools automatically and in the background.",
     bgImage:
       "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-02.webp",
     screenshot:
@@ -28,7 +28,7 @@ const steps = [
     num: "03",
     title: "Iterate and improve",
     description:
-      "Review results, provide feedback, and refine. Computer learns from your preferences and improves over time.",
+      "Keep iterating and guiding Computer as it works. Or start Computer on a new task.",
     bgImage:
       "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-03.webp",
     screenshot:

@@ -8,7 +8,7 @@ const features = [
     num: "01",
     title: "Background tasks and continuous monitoring",
     description:
-      "Set up long-running tasks that work while you sleep. Computer monitors websites, tracks changes, and alerts you when something important happens — for hours, days, or months.",
+      "Set recurring tasks that Computer executes autonomously and persistently over time.",
     image:
       "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-task-monitoring.webp",
   },
@@ -16,7 +16,7 @@ const features = [
     num: "02",
     title: "Parallel research and browser automation",
     description:
-      "Computer runs multiple research threads simultaneously, browsing the web, extracting data, and synthesizing findings — like having a team of research assistants.",
+      "Search the web, automate browser actions, extract data, and synthesize findings in a single workflow.",
     image:
       "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-research-browse.webp",
   },
@@ -24,7 +24,7 @@ const features = [
     num: "03",
     title: "Connect tools and apps",
     description:
-      "Bridge your existing tools without complex integrations. Computer works across Slack, GitHub, Google Workspace, databases, and APIs — just like you would.",
+      "Connect Gmail, Slack, Notion, Calendar, and hundreds of others.",
     image:
       "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-connect-tools.webp",
   },
@@ -32,7 +32,7 @@ const features = [
     num: "04",
     title: "Create and build",
     description:
-      "From writing code and building dashboards to generating reports and designing workflows — Computer doesn't just plan, it builds.",
+      "Create production ready apps, websites, reports, and more.",
     image:
       "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-create-build.webp",
   },

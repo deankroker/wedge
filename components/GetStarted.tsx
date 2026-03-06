@@ -63,8 +63,8 @@ export default function GetStarted() {
               maxWidth: "36rem",
             }}
           >
-            Available now for Perplexity Max subscribers. Give Computer a task
-            and let it work for you.
+            Available now to Perplexity Max subscribers. Coming soon to
+            Enterprise and Pro users.
           </p>
           <a
             href="#"

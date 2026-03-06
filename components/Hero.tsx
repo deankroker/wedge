@@ -21,58 +21,23 @@ const rotatingWords = [
 const queryCards = [
   {
     num: "01",
-    text: "Research the latest advancements in quantum computing and summarize key breakthroughs",
+    text: "Create an interactive map of the United States showing the geographic density of the impact of DOGE layoffs.",
     tag: "/query",
   },
   {
     num: "02",
-    text: "Monitor my competitor's pricing page and alert me when prices change",
-    tag: "/monitor",
+    text: "Build an Excel workbook with 1950-present S&P 500 and CPI data, including returns, drawdowns, and rolling stats charts.",
+    tag: "/query",
   },
   {
     num: "03",
-    text: "Write and run tests for the authentication module, fix any failures",
-    tag: "/code",
+    text: "Create an animated bar chart race of Billboard Hot 100 genre dominance (1958-2025) with a monthly date counter.",
+    tag: "/query",
   },
   {
     num: "04",
-    text: "Schedule a series of social media posts for the next two weeks",
-    tag: "/schedule",
-  },
-  {
-    num: "05",
-    text: "Browse job postings and compile a spreadsheet of relevant ML engineer roles",
-    tag: "/browse",
-  },
-  {
-    num: "06",
-    text: "Build a dashboard showing real-time sales metrics from our Stripe account",
-    tag: "/build",
-  },
-  {
-    num: "07",
-    text: "Connect our CRM to Slack and notify the team on new enterprise leads",
-    tag: "/connect",
-  },
-  {
-    num: "08",
-    text: "Automate the weekly report generation and email it to stakeholders",
-    tag: "/automate",
-  },
-  {
-    num: "09",
-    text: "Edit and compress all product images to WebP format under 200KB",
-    tag: "/edit",
-  },
-  {
-    num: "10",
-    text: "Write documentation for the REST API endpoints with examples",
-    tag: "/write",
-  },
-  {
-    num: "11",
-    text: "Create a financial model projecting revenue for the next 18 months",
-    tag: "/create",
+    text: "Build a mobile-friendly rent-vs-buy web app using zip code data and 30-year Monte Carlo financial simulations.",
+    tag: "/query",
   },
 ];
 
