@@ -49,7 +49,10 @@ const projectCards = [
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
-  const [cardIndex, setCardIndex] = useState(0);
+  // Which set of 3 cards we're showing (0 = cards 0,1,2 | 1 = cards 3,4,5 | etc.)
+  const [setIndex, setSetIndex] = useState(0);
+  // Which card within the current set is "lit" (0, 1, or 2)
+  const [activeSlot, setActiveSlot] = useState(0);
   const [soundOff, setSoundOff] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -61,17 +64,31 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  // Card cycler — slow swap every 3s
+  // Card highlight + set cycling
+  // Each card gets highlighted for 2s, then move to next.
+  // After card 3 (slot 2), swap all 3 cards to next set.
   useEffect(() => {
     const interval = setInterval(() => {
-      setCardIndex((i) => (i + 1) % projectCards.length);
-    }, 3000);
+      setActiveSlot((prev) => {
+        if (prev >= 2) {
+          // Move to next set of 3
+          setSetIndex((s) => {
+            const totalSets = Math.ceil(projectCards.length / 3);
+            return (s + 1) % totalSets;
+          });
+          return 0;
+        }
+        return prev + 1;
+      });
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
-  // Always show 3 cards stacked, cycling through
-  const getCard = (offset: number) =>
-    projectCards[(cardIndex + offset) % projectCards.length];
+  // Get the 3 cards for the current set
+  const getCard = (slot: number) => {
+    const idx = (setIndex * 3 + slot) % projectCards.length;
+    return projectCards[idx];
+  };
 
   return (
     <section
@@ -212,7 +229,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Left side: 3 fully visible cards in a vertical column — hidden on mobile */}
+      {/* Left side: 3 cards in a column, highlight walks down, content swaps in-place */}
       <div
         className="hidden md:flex flex-col gap-4 absolute"
         style={{
@@ -222,43 +239,51 @@ export default function Hero() {
           zIndex: 2,
         }}
       >
-        {[0, 1, 2].map((offset) => {
-          const card = getCard(offset);
+        {[0, 1, 2].map((slot) => {
+          const card = getCard(slot);
+          const isActive = slot === activeSlot;
           return (
-            <AnimatePresence key={offset} mode="popLayout">
-              <motion.div
-                key={`${card.num}-${cardIndex}-${offset}`}
-                className="border flex flex-col justify-between"
+            <div
+              key={slot}
+              className="border flex flex-col justify-between"
+              style={{
+                height: "140px",
+                borderRadius: "8px",
+                borderColor: isActive ? "var(--astra-2000-20, rgba(39,25,0,0.2))" : "var(--astra-2000-10)",
+                boxShadow: isActive
+                  ? "0 4px 20px rgba(39,25,0,0.12)"
+                  : "0 2px 8px rgba(39,25,0,0.04)",
+                padding: "0.75rem 1rem",
+                overflow: "hidden",
+                position: "relative",
+                transition: "border-color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease",
+                opacity: isActive ? 1 : 0.55,
+              }}
+            >
+              {/* Glass background */}
+              <div
                 style={{
-                  height: "140px",
+                  position: "absolute",
+                  inset: 0,
+                  background: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.6)",
+                  backdropFilter: "blur(20px)",
+                  WebkitBackdropFilter: "blur(20px)",
                   borderRadius: "8px",
-                  borderColor: "var(--astra-2000-10)",
-                  boxShadow: "0 2px 12px rgba(39,25,0,0.06)",
-                  padding: "0.75rem 1rem",
-                  overflow: "hidden",
-                  position: "relative",
-                  opacity: 1 - offset * 0.15,
+                  zIndex: 0,
+                  pointerEvents: "none",
+                  transition: "background 0.4s ease",
                 }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1 - offset * 0.15, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                transition={{ duration: 0.4, delay: offset * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
-              >
-                {/* Glass background */}
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background: "rgba(255,255,255,0.7)",
-                    backdropFilter: "blur(20px)",
-                    WebkitBackdropFilter: "blur(20px)",
-                    borderRadius: "8px",
-                    zIndex: 0,
-                    pointerEvents: "none",
-                  }}
-                />
-                {/* Content */}
-                <div style={{ position: "relative", zIndex: 1 }}>
+              />
+              {/* Content — fades in-place when card set changes */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={`${card.num}-${setIndex}`}
+                  style={{ position: "relative", zIndex: 1 }}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <span
                     style={{
                       fontFamily: "var(--nimbus-font-mono)",
@@ -284,9 +309,12 @@ export default function Hero() {
                   >
                     {card.text}
                   </p>
-                </div>
-                <div style={{ position: "relative", zIndex: 1 }}>
-                  <span
+                </motion.div>
+              </AnimatePresence>
+              <div style={{ position: "relative", zIndex: 1 }}>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={`${card.tag}-${setIndex}`}
                     style={{
                       fontFamily: "var(--nimbus-font-mono)",
                       fontSize: "0.7rem",
@@ -294,13 +322,18 @@ export default function Hero() {
                       background: "var(--astra-300)",
                       padding: "2px 8px",
                       borderRadius: "9999px",
+                      display: "inline-block",
                     }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
                   >
                     {card.tag}
-                  </span>
-                </div>
-              </motion.div>
-            </AnimatePresence>
+                  </motion.span>
+                </AnimatePresence>
+              </div>
+            </div>
           );
         })}
       </div>
