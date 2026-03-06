@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  /* Astra (light) palette */
+  --astra-0: #fff;
+  --astra-100: #fdfbfa;
+  --astra-200: #faf8f5;
+  --astra-300: #f3f0ec;
+  --astra-400: #ece9e4;
+  --astra-500: #e5e2dc;
+  --astra-600: #dedbd4;
+  --astra-700: #d8d4cd;
+  --astra-1000: #27251e;
+  --astra-2000: #271a00;
+  --astra-200-60: #faf8f599;
+  --astra-200-80: #faf8f5cc;
+  --astra-200-55: #faf8f58c;
+  --astra-200-40: #faf8f566;
+  --astra-1000-10h: #27251e1b;
+  --astra-1000-7: #27251e12;
+  --astra-1000-3h: #27251e09;
+  --astra-1000-80: #27251ecc;
+  --astra-1000-40: #27251e66;
+  --astra-2000-60: #271a0099;
+  --astra-2000-40: #271a0066;
+  --astra-2000-20: #271a0033;
+  --astra-2000-80: #271a00cc;
+  --astra-2000-12: #271a001f;
+  --astra-2000-10: #271a001a;
+  --astra-2000-8: #271a0014;
+  --astra-0-80: #fffc;
+  --astra-0-60: #fff9;
+  --astra-0-40: #fff6;
+  --astra-0-20: #fff3;
+  --astra-0-12: #ffffff1f;
+  --astra-0-8: #ffffff14;
+
+  /* Umbra (dark) palette */
+  --umbra-0: #000;
+  --umbra-100: #171615;
+  --umbra-200: #1e1d1c;
+  --umbra-300: #242322;
+  --umbra-400: #2a2928;
+  --umbra-500: #302f2e;
+  --umbra-600: #363534;
+  --umbra-700: #3c3b3a;
+  --umbra-1000: #d6d5d4;
+  --umbra-100-60: #17161599;
+
+  /* Dark theme tokens */
+  --dark-bg: var(--umbra-0);
+  --dark-text: var(--umbra-1000);
+  --dark-text-muted: #d6d5d499;
+  --dark-border: var(--astra-0-20);
+  --dark-surface-accent: #242a1c;
+  --dark-btn-bg: var(--umbra-1000);
+  --dark-btn-text: var(--umbra-100);
+  --dark-btn-bg-hover: #d6d5d4cc;
+  --dark-btn-bg-active: #d6d5d466;
+
+  /* Typography */
+  --nimbus-font-serif: "pplxSerif", Georgia, serif;
+  --nimbus-font-sans: "pplxSans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --nimbus-font-mono: "pplxSansMono", monospace;
+
+  /* Layout */
+  --page-width: 108rem;
+  --container-max: 108rem;
+  --nav-height: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--astra-200);
+  color: var(--astra-2000);
+  font-family: var(--nimbus-font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Section transitions */
+.section-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
