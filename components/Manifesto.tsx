@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const paragraphs = [
   {
@@ -67,36 +67,13 @@ function ComputerIcon() {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: "inline-block", verticalAlign: "middle" }}
       >
-        {/* Monitor body */}
-        <rect
-          x="4"
-          y="6"
-          width="36"
-          height="24"
-          rx="3"
-          fill="var(--astra-2000)"
-        />
-        {/* Screen */}
+        <rect x="4" y="6" width="36" height="24" rx="3" fill="var(--astra-2000)" />
         <rect x="7" y="9" width="30" height="18" rx="1.5" fill="#fff" />
-        {/* Left eye */}
         <circle cx="15" cy="18" r="3.5" fill="var(--astra-2000)" />
-        <circle
-          cx={15 + eyePos.x}
-          cy={18 + eyePos.y}
-          r="1.5"
-          fill="white"
-        />
-        {/* Right eye */}
+        <circle cx={15 + eyePos.x} cy={18 + eyePos.y} r="1.5" fill="white" />
         <circle cx="29" cy="18" r="3.5" fill="var(--astra-2000)" />
-        <circle
-          cx={29 + eyePos.x}
-          cy={18 + eyePos.y}
-          r="1.5"
-          fill="white"
-        />
-        {/* Stand */}
+        <circle cx={29 + eyePos.x} cy={18 + eyePos.y} r="1.5" fill="white" />
         <rect x="18" y="30" width="8" height="6" rx="1" fill="var(--astra-2000)" />
-        {/* Base */}
         <rect x="13" y="36" width="18" height="3" rx="1.5" fill="var(--astra-2000)" />
       </svg>
     </span>
@@ -110,15 +87,14 @@ function ManifestoParagraph({
   children: React.ReactNode;
   delay?: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-10% 0px" });
-
   return (
-    <div ref={ref}>
-      <motion.p
-        initial={{ opacity: 0, y: 32 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
+    <motion.div
+      initial={{ opacity: 0, y: 32 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ duration: 0.7, delay, ease: [0.25, 0.1, 0.25, 1] }}
+    >
+      <p
         className="leading-tight"
         style={{
           fontFamily: "var(--nimbus-font-serif)",
@@ -129,8 +105,8 @@ function ManifestoParagraph({
         }}
       >
         {children}
-      </motion.p>
-    </div>
+      </p>
+    </motion.div>
   );
 }
 

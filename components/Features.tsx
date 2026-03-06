@@ -1,7 +1,6 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -45,18 +44,16 @@ function FeatureRow({
   feature: (typeof features)[0];
   index: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-15% 0px" });
   const isEven = index % 2 === 0;
 
   return (
     <motion.div
-      ref={ref}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center ${
         index > 0 ? "mt-24 lg:mt-32" : ""
       }`}
       initial={{ opacity: 0, y: 48 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
     >
       {/* Text */}
