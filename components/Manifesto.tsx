@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 const paragraphs = [
@@ -8,8 +7,8 @@ const paragraphs = [
     id: "p1",
     content: (
       <>
-        <ComputerIcon /> <strong>Perplexity Computer</strong> is a general-purpose digital worker
-        that operates the same interfaces you do.
+        <WedgeIcon /> <strong>Your business wasn&apos;t built for AI.</strong> That&apos;s exactly
+        why it needs it.
       </>
     ),
   },
@@ -17,8 +16,9 @@ const paragraphs = [
     id: "p2",
     content: (
       <>
-        Computer creates and executes entire workflows, capable of running for
-        hours or even months.
+        Wedge doesn&apos;t make decks about &ldquo;digital transformation.&rdquo; We build the actual
+        tools — custom AI systems that slot into your existing workflows and make
+        everything run faster.
       </>
     ),
   },
@@ -26,40 +26,17 @@ const paragraphs = [
     id: "p3",
     content: (
       <>
-        Chat answers. Agents do tasks.{" "}
-        <strong style={{ fontStyle: "italic" }}>Computer works.</strong>
+        Most consultants sell you a roadmap.{" "}
+        <strong style={{ fontStyle: "italic" }}>We ship the product.</strong>
       </>
     ),
   },
 ];
 
-function ComputerIcon() {
-  const iconRef = useRef<SVGSVGElement>(null);
-  const [eyePos, setEyePos] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!iconRef.current) return;
-      const rect = iconRef.current.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      const maxDist = 2;
-      const x = dist > 0 ? (dx / dist) * Math.min(dist / 80, maxDist) : 0;
-      const y = dist > 0 ? (dy / dist) * Math.min(dist / 80, maxDist) : 0;
-      setEyePos({ x, y });
-    };
-
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
-
+function WedgeIcon() {
   return (
     <span className="inline-block align-middle mr-2" style={{ lineHeight: 1 }}>
       <svg
-        ref={iconRef}
         width="44"
         height="44"
         viewBox="0 0 44 44"
@@ -67,14 +44,19 @@ function ComputerIcon() {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: "inline-block", verticalAlign: "middle" }}
       >
-        <rect x="4" y="6" width="36" height="24" rx="3" fill="var(--astra-2000)" />
-        <rect x="7" y="9" width="30" height="18" rx="1.5" fill="#fff" />
-        <circle cx="15" cy="18" r="3.5" fill="var(--astra-2000)" />
-        <circle cx={15 + eyePos.x} cy={18 + eyePos.y} r="1.5" fill="white" />
-        <circle cx="29" cy="18" r="3.5" fill="var(--astra-2000)" />
-        <circle cx={29 + eyePos.x} cy={18 + eyePos.y} r="1.5" fill="white" />
-        <rect x="18" y="30" width="8" height="6" rx="1" fill="var(--astra-2000)" />
-        <rect x="13" y="36" width="18" height="3" rx="1.5" fill="var(--astra-2000)" />
+        {/* Wedge / triangle element */}
+        <polygon
+          points="22,4 40,38 4,38"
+          fill="none"
+          stroke="var(--astra-2000)"
+          strokeWidth="2.5"
+        />
+        <polygon
+          points="22,14 32,34 12,34"
+          fill="var(--astra-2000)"
+          opacity="0.15"
+        />
+        <line x1="22" y1="4" x2="22" y2="38" stroke="var(--astra-2000)" strokeWidth="1" opacity="0.3" />
       </svg>
     </span>
   );

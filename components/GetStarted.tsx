@@ -9,9 +9,9 @@ export default function GetStarted() {
       className="relative overflow-hidden"
       style={{ minHeight: "100vh" }}
     >
-      {/* Background image */}
+      {/* Background image — dramatic mountain */}
       <img
-        src="https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/footer-background.webp"
+        src="https://images.unsplash.com/photo-1767286669935-e466c9ebb881?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMHJpZGdlJTIwZHJhbWF0aWMlMjBsaWdodHxlbnwwfDB8fHwxNzcyODM0NTcyfDA&ixlib=rb-4.1.0&q=80&w=1080"
         alt=""
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -48,46 +48,77 @@ export default function GetStarted() {
               lineHeight: 1.05,
             }}
           >
-            Put Computer
+            Ready to find
             <br />
-            to work
+            your leverage?
           </h2>
           <p
-            className="text-lg md:text-xl mb-10 leading-relaxed mx-auto"
+            className="text-lg md:text-xl mb-12 leading-relaxed mx-auto"
             style={{
               color: "var(--dark-text-muted)",
               maxWidth: "36rem",
             }}
           >
-            Available now to Perplexity Max subscribers. Coming soon to
-            Enterprise and Pro users.
+            Most engagements start with a conversation. Tell us what you&apos;re building
+            and we&apos;ll show you where AI fits.
           </p>
-          <a
-            href="#"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80"
-            style={{
-              background: "var(--dark-btn-bg)",
-              color: "var(--dark-btn-text)",
-              letterSpacing: "0.01em",
-            }}
-          >
-            Try Computer
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              className="ml-1"
+
+          {/* 3-tier CTA */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {/* Tier 1: Email */}
+            <a
+              href="mailto:dean@westernhemlock.com"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80"
+              style={{
+                background: "var(--dark-btn-bg)",
+                color: "var(--dark-btn-text)",
+                letterSpacing: "0.01em",
+              }}
             >
-              <path
-                d="M3.5 8h9M9 4.5l3.5 3.5-3.5 3.5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </a>
+              Email Us
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-1">
+                <path
+                  d="M3.5 8h9M9 4.5l3.5 3.5-3.5 3.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+
+            {/* Tier 2: Book a call */}
+            <a
+              href="https://calendly.com/placeholder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80 border"
+              style={{
+                background: "transparent",
+                color: "var(--dark-text)",
+                borderColor: "var(--dark-border)",
+                letterSpacing: "0.01em",
+              }}
+            >
+              Book a 10-min Call
+            </a>
+
+            {/* Tier 3: Buy */}
+            <a
+              href="https://buy.stripe.com/placeholder-5hr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80 border"
+              style={{
+                background: "transparent",
+                color: "var(--dark-text-muted)",
+                borderColor: "rgba(255,255,255,0.08)",
+                letterSpacing: "0.01em",
+              }}
+            >
+              Buy 5hrs — $3K
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -5,35 +5,35 @@ import { motion } from "framer-motion";
 const features = [
   {
     num: "01",
-    title: "Background tasks and continuous monitoring",
+    title: "Workflow Automation",
     description:
-      "Set recurring tasks that Computer executes autonomously and persistently over time.",
+      "We find the repetitive, soul-crushing processes your team does every day and replace them with AI-powered workflows that run themselves. Intake forms, data processing, report generation — all on autopilot.",
     image:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-task-monitoring.webp",
+      "https://images.unsplash.com/photo-1612885594304-ca622fff47e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGxpZ2h0JTIwbWluaW1hbHxlbnwwfDB8fHwxNzcyODM0NTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     num: "02",
-    title: "Parallel research and browser automation",
+    title: "Custom AI Tools",
     description:
-      "Search the web, automate browser actions, extract data, and synthesize findings in a single workflow.",
+      "Not chatbot wrappers. Real tools built for your specific business logic. Proposal generators, competitive intelligence dashboards, client matching engines — whatever your wedge demands.",
     image:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-research-browse.webp",
+      "https://images.unsplash.com/photo-1758678527840-12d011853eba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMGxpZ2h0JTIwbWluaW1hbHxlbnwwfDB8fHwxNzcyODM0NTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     num: "03",
-    title: "Connect tools and apps",
+    title: "Integration Architecture",
     description:
-      "Connect Gmail, Slack, Notion, Calendar, and hundreds of others.",
+      "Your tools don't talk to each other. We fix that. CRM to invoicing, intake to scheduling, email to project management — we wire AI into the connective tissue of your business.",
     image:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-connect-tools.webp",
+      "https://images.unsplash.com/photo-1558932129-58b0867c4985?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGxpZ2h0JTIwbWluaW1hbHxlbnwwfDB8fHwxNzcyODM0NTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     num: "04",
-    title: "Create and build",
+    title: "Team Acceleration",
     description:
-      "Create production ready apps, websites, reports, and more.",
+      "Your people are the asset. We level them up with AI-native tools and workflows so they produce 3x the output without 3x the burnout. Think force multiplier, not replacement.",
     image:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/feature-create-build.webp",
+      "https://images.unsplash.com/photo-1612885488634-0a698136fed9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGxpZ2h0JTIwbWluaW1hbHxlbnwwfDB8fHwxNzcyODM0NTczfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
@@ -118,7 +118,7 @@ export default function Features() {
             className="text-xs font-mono tracking-[0.3em] uppercase mb-6"
             style={{ color: "var(--astra-2000-60)" }}
           >
-            FEATURES
+            SERVICES
           </p>
           <h2
             style={{
@@ -129,9 +129,9 @@ export default function Features() {
               fontWeight: 400,
             }}
           >
-            What Computer
+            What Wedge
             <br />
-            does for you
+            builds for you
           </h2>
         </div>
 

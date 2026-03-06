@@ -1,37 +1,39 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const rotatingWords = [
-  "Researches", "Codes", "Browses", "Builds", "Monitors",
-  "Works", "Schedules", "Creates", "Writes", "Edits",
-  "Connects", "Automates",
+  "Ships", "Builds", "Automates", "Transforms",
+  "Architects", "Designs", "Accelerates", "Integrates",
+  "Deploys", "Optimizes",
 ];
 
-const queryCards = [
+const projectCards = [
   {
     num: "01",
-    text: "Create an interactive map of the United States showing the geographic density of the impact of DOGE layoffs.",
+    text: "Internal ops dashboard that replaced 3 spreadsheets and 2 weekly meetings. Built in 4 days.",
+    tag: "/build",
   },
   {
     num: "02",
-    text: "Build an Excel workbook with 1950-present S&P 500 and CPI data, including returns, drawdowns, and rolling stats charts.",
+    text: "AI-powered proposal generator that cut sales cycle time by 40% for a 50-person services firm.",
+    tag: "/automate",
   },
   {
     num: "03",
-    text: "Create an animated bar chart race of Billboard Hot 100 genre dominance (1958-2025) with a monthly date counter.",
+    text: "Custom intake + triage system for a law firm processing 200+ inquiries/week. Zero manual sorting.",
+    tag: "/integrate",
   },
   {
     num: "04",
-    text: "Build a mobile-friendly rent-vs-buy web app using zip code data and 30-year Monte Carlo financial simulations.",
+    text: "Agentic workflow that monitors competitors, summarizes changes, and briefs the exec team every Monday.",
+    tag: "/monitor",
   },
 ];
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
-  const [soundOff, setSoundOff] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,7 +50,7 @@ export default function Hero() {
         background: "var(--astra-200)",
       }}
     >
-      {/* Video background — NOT a circle, large rect with radial gradient fade */}
+      {/* Hero image background — PNW forest fog */}
       <div
         className="absolute"
         style={{
@@ -60,20 +62,12 @@ export default function Hero() {
           transform: "translate(calc(-50% - 160px))",
         }}
       >
-        <video
-          ref={videoRef}
-          autoPlay
-          muted={soundOff}
-          loop
-          playsInline
+        <img
+          src="https://images.unsplash.com/photo-1536736368159-ea9093d4a213?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxwYWNpZmljJTIwbm9ydGh3ZXN0JTIwZm9yZXN0JTIwZm9nfGVufDB8MHx8fDE3NzI4MzQ1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Pacific Northwest forest in fog"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ zIndex: 1 }}
-        >
-          <source
-            src="https://pplx-res.cloudinary.com/video/upload/v1771728928/pplx-web/Computer/videos/computer-hero-bg-2.webm"
-            type="video/webm"
-          />
-        </video>
+        />
         {/* Radial gradient fade — the key to the organic edge look */}
         <div
           className="absolute inset-0"
@@ -103,7 +97,7 @@ export default function Hero() {
           pointerEvents: "none",
         }}
       >
-        {/* "Computer" */}
+        {/* "Wedge" */}
         <h1
           style={{
             fontFamily: "var(--nimbus-font-serif)",
@@ -116,7 +110,7 @@ export default function Hero() {
             width: "100%",
           }}
         >
-          Computer
+          Wedge
         </h1>
 
         {/* Word rotator */}
@@ -160,17 +154,17 @@ export default function Hero() {
           </AnimatePresence>
         </div>
 
-        {/* Try Computer button */}
+        {/* CTA button */}
         <div className="mt-8" style={{ pointerEvents: "auto" }}>
           <a
-            href="#get-started"
+            href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
             style={{
               background: "var(--astra-2000)",
               color: "var(--astra-200)",
             }}
           >
-            Try Computer
+            Start a Conversation
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
@@ -178,7 +172,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Left side: Query card stack — vertical with gap */}
+      {/* Left side: Project card stack */}
       <div
         style={{
           zIndex: 2,
@@ -192,7 +186,7 @@ export default function Hero() {
           paddingLeft: "2.5rem",
         }}
       >
-        {queryCards.map((card, i) => (
+        {projectCards.map((card, i) => (
           <div
             key={card.num}
             style={{
@@ -262,46 +256,23 @@ export default function Hero() {
                   borderRadius: "9999px",
                 }}
               >
-                /query
+                {card.tag}
               </span>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Bottom left: BUILDING */}
+      {/* Bottom left: status */}
       <div
         className="absolute bottom-6 left-6 flex items-center gap-3"
         style={{ color: "var(--astra-2000-60)", zIndex: 2 }}
       >
-        <span className="text-xs font-mono tracking-widest">BUILDING...</span>
+        <span className="text-xs font-mono tracking-widest">AI CONSULTING</span>
         <span className="text-xs font-mono" style={{ letterSpacing: "2px" }}>
-          ⠿⠿⠿⠧⠀⠀⠀
+          BY WESTERN HEMLOCK
         </span>
       </div>
-
-      {/* Bottom right: SOUND toggle */}
-      <button
-        className="absolute bottom-6 right-6 flex items-center gap-2 text-xs font-mono tracking-widest transition-opacity hover:opacity-70"
-        style={{ color: "var(--astra-2000-60)", zIndex: 2 }}
-        onClick={() => {
-          setSoundOff(!soundOff);
-          if (videoRef.current) videoRef.current.muted = !soundOff;
-        }}
-      >
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path d="M1 4h3l4-3v10L4 8H1V4z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-          {soundOff ? (
-            <path d="M13 1L9 5m4 5L9 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-          ) : (
-            <>
-              <path d="M10 2c1.5 1 2.5 2.5 2.5 4s-1 3-2.5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-              <path d="M12 0c2 1.5 3 3.5 3 6s-1 4.5-3 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-            </>
-          )}
-        </svg>
-        {soundOff ? "SOUND OFF" : "SOUND ON"}
-      </button>
     </section>
   );
 }

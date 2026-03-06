@@ -6,33 +6,27 @@ import { motion, useScroll, useTransform } from "framer-motion";
 const steps = [
   {
     num: "01",
-    title: "Give Computer tasks",
+    title: "We audit your workflows",
     description:
-      "Prompt in natural language. Computer deploys subagents to handle the rest.",
+      "We map every process, bottleneck, and manual step in your operation. No assumptions — just honest analysis of where AI can actually move the needle.",
     bgImage:
-      "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-01.webp",
-    screenshot:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/step-01.webp",
+      "https://images.unsplash.com/photo-1536736368159-ea9093d4a213?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxwYWNpZmljJTIwbm9ydGh3ZXN0JTIwZm9yZXN0JTIwZm9nfGVufDB8MHx8fDE3NzI4MzQ1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     num: "02",
-    title: "Computer works",
+    title: "We build the wedge",
     description:
-      "Computer will browse, research, create, and connect your tools automatically and in the background.",
+      "Custom AI tools designed for your exact workflows. Not off-the-shelf. Not a chatbot wrapper. Real software that your team actually uses — built in days, not months.",
     bgImage:
-      "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-02.webp",
-    screenshot:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/step-02.webp",
+      "https://images.unsplash.com/photo-1572214856336-67e55541a3b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwyfHxwYWNpZmljJTIwbm9ydGh3ZXN0JTIwZm9yZXN0JTIwZm9nfGVufDB8MHx8fDE3NzI4MzQ1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     num: "03",
-    title: "Iterate and improve",
+    title: "Your business runs faster",
     description:
-      "Keep iterating and guiding Computer as it works. Or start Computer on a new task.",
+      "The work that took your team days now takes hours. The decisions that required guesswork now have data. You keep the tools. We move on to the next wedge.",
     bgImage:
-      "https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-03.webp",
-    screenshot:
-      "https://pplx-res.cloudinary.com/image/upload/t_w2400/pplx-web/Computer/images/step-03.webp",
+      "https://images.unsplash.com/photo-1550566609-7ff4a8dc23f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwzfHxwYWNpZmljJTIwbm9ydGh3ZXN0JTIwZm9yZXN0JTIwZm9nfGVufDB8MHx8fDE3NzI4MzQ1NzB8MA&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
@@ -132,7 +126,7 @@ function StepCard({
           </p>
         </div>
 
-        {/* Image area (16:9) with bg image + screenshot overlay */}
+        {/* Image area (16:9) with bg image */}
         <div
           style={{
             aspectRatio: "16/9",
@@ -147,34 +141,30 @@ function StepCard({
           {/* Background nature image */}
           <img
             src={step.bgImage}
-            alt=""
+            alt={step.title}
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* Screenshot overlay */}
+          {/* Subtle overlay with step number */}
           <div
             style={{
               position: "absolute",
-              inset: "5% 2.8125%",
+              inset: 0,
+              background: "linear-gradient(135deg, rgba(0,0,0,0.2) 0%, transparent 60%)",
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
-              pointerEvents: "none",
+              justifyContent: "center",
             }}
           >
-            <img
-              src={step.screenshot}
-              alt={step.title}
+            <span
               style={{
-                objectFit: "contain",
-                borderRadius: "0.75rem",
-                width: "auto",
-                maxWidth: "100%",
-                height: "auto",
-                maxHeight: "100%",
-                display: "block",
-                filter: "drop-shadow(0 4px 20px rgba(0,0,0,0.2))",
+                fontFamily: "var(--nimbus-font-serif)",
+                fontSize: "8rem",
+                color: "rgba(250,248,245,0.12)",
+                fontWeight: 300,
               }}
-            />
+            >
+              {step.num}
+            </span>
           </div>
         </div>
       </motion.div>
@@ -216,7 +206,7 @@ export default function HowItWorks() {
               lineHeight: "100%",
             }}
           >
-            STEPS
+            PROCESS
           </span>
           <h2
             style={{

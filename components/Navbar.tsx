@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "#manifesto" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Features", href: "#features" },
-  { label: "Get started", href: "#get-started" },
+  { label: "Services", href: "/services" },
+  { label: "Stack", href: "/stack" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navbar() {
@@ -57,38 +57,44 @@ export default function Navbar() {
         style={{ maxWidth: "var(--page-width)" }}
       >
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 shrink-0">
-          <Image
-            src="https://pplx-marketing-static.perplexity.ai/assets/pplx-computer-main-DHpH_k7G.svg"
-            alt="Perplexity Computer"
-            width={160}
-            height={28}
-            className="h-7 w-auto"
-            unoptimized
-          />
-        </a>
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <span
+            className={`text-2xl font-light tracking-tight ${textColor}`}
+            style={{ fontFamily: "var(--nimbus-font-serif)" }}
+          >
+            Wedge
+          </span>
+          {/* Wedge triangle mark */}
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
+            <polygon
+              points="10,2 18,18 2,18"
+              fill={dark ? "#d6d5d4" : "#271a00"}
+              opacity="0.8"
+            />
+          </svg>
+        </Link>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:opacity-70 ${textColor}`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#get-started"
+          <Link
+            href="/contact"
             className={`ml-2 px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
               dark
                 ? "bg-[#d6d5d4] text-[#171615] hover:bg-[#d6d5d4cc]"
                 : "bg-[#271a00] text-[#faf8f5] hover:bg-[#271a00cc]"
             }`}
           >
-            Try Computer
-          </a>
+            Get Started
+          </Link>
         </div>
 
         {/* Mobile hamburger */}
@@ -123,17 +129,17 @@ export default function Navbar() {
           }`}
         >
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
               className={`text-sm font-medium ${textColor}`}
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#get-started"
+          <Link
+            href="/contact"
             className={`inline-block px-4 py-2 rounded-full text-sm font-semibold text-center ${
               dark
                 ? "bg-[#d6d5d4] text-[#171615]"
@@ -141,8 +147,8 @@ export default function Navbar() {
             }`}
             onClick={() => setMenuOpen(false)}
           >
-            Try Computer
-          </a>
+            Get Started
+          </Link>
         </div>
       )}
     </nav>

@@ -27,9 +27,9 @@ export default function Unifies() {
       >
         {/* Black base */}
         <div className="absolute inset-0" style={{ background: "#000", zIndex: 1 }} />
-        {/* Nature image at 60% opacity */}
+        {/* Nature image — dark forest canopy */}
         <img
-          src="https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-01.webp"
+          src="https://images.unsplash.com/photo-1731508257431-05eed6a6fc45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZm9yZXN0JTIwY2Fub3B5JTIwYWVyaWFsfGVufDB8MHx8fDE3NzI4MzQ1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           style={{ opacity: 0.6, zIndex: 2 }}
@@ -78,7 +78,7 @@ export default function Unifies() {
         >
           {/* Title */}
           <motion.div
-            className="absolute inset-0 flex items-center justify-center pointer-events-none"
+            className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
             style={{
               zIndex: 5,
               opacity: titleOpacity,
@@ -95,11 +95,25 @@ export default function Unifies() {
                 margin: 0,
               }}
             >
-              Computer<br />unifies
+              One wedge.<br />Infinite leverage.
             </h2>
+            <p
+              style={{
+                color: "var(--astra-200-60)",
+                fontFamily: "var(--nimbus-font-sans)",
+                textAlign: "center",
+                fontSize: "18px",
+                fontWeight: 400,
+                lineHeight: "160%",
+                maxWidth: "32rem",
+                marginTop: "1.5rem",
+              }}
+            >
+              We find the single point of highest leverage in your business — then drive AI straight through it.
+            </p>
           </motion.div>
 
-          {/* Decorative helix lines (simplified from Three.js) */}
+          {/* Decorative helix lines */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 4 }}>
             {[...Array(12)].map((_, i) => (
               <div
