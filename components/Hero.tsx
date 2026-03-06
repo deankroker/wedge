@@ -61,19 +61,17 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  // Card cycler
+  // Card cycler — slow swap every 3s
   useEffect(() => {
     const interval = setInterval(() => {
       setCardIndex((i) => (i + 1) % projectCards.length);
-    }, 2400);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  const visibleCards = [
-    projectCards[cardIndex % projectCards.length],
-    projectCards[(cardIndex + 1) % projectCards.length],
-    projectCards[(cardIndex + 2) % projectCards.length],
-  ];
+  // Always show 3 cards stacked, cycling through
+  const getCard = (offset: number) =>
+    projectCards[(cardIndex + offset) % projectCards.length];
 
   return (
     <section
@@ -109,7 +107,7 @@ export default function Hero() {
             type="video/webm"
           />
         </video>
-        {/* Radial gradient fade — the key to the organic edge look */}
+        {/* Radial gradient fade */}
         <div
           className="absolute inset-0"
           style={{
@@ -125,25 +123,26 @@ export default function Hero() {
         />
       </div>
 
-      {/* Right side: headlines */}
+      {/* ===== DESKTOP LAYOUT ===== */}
+
+      {/* Right side: headlines — hidden on mobile */}
       <div
-        className="flex flex-col justify-start items-start"
+        className="hidden md:flex flex-col justify-start items-end"
         style={{
           zIndex: 2,
           position: "absolute",
           top: "17.5rem",
-          right: "18rem",
+          right: "clamp(4rem, 12vw, 18rem)",
           width: "fit-content",
           textAlign: "right",
           pointerEvents: "none",
         }}
       >
-        {/* "Wedge" */}
         <h1
           style={{
             fontFamily: "var(--nimbus-font-serif)",
             color: "var(--astra-2000)",
-            fontSize: "96px",
+            fontSize: "clamp(64px, 7vw, 96px)",
             fontWeight: 300,
             lineHeight: "100%",
             letterSpacing: 0,
@@ -159,9 +158,9 @@ export default function Hero() {
           style={{
             textAlign: "right",
             width: "100%",
-            minWidth: "14ch",
+            minWidth: "10ch",
             height: "1em",
-            fontSize: "96px",
+            fontSize: "clamp(64px, 7vw, 96px)",
             lineHeight: "100%",
             position: "relative",
             overflow: "hidden",
@@ -177,13 +176,13 @@ export default function Hero() {
               style={{
                 position: "absolute",
                 top: 0,
-                left: 0,
+                right: 0,
                 width: "100%",
                 minWidth: "max-content",
                 whiteSpace: "nowrap",
                 fontFamily: "var(--nimbus-font-serif)",
                 color: "var(--astra-2000-60)",
-                fontSize: "96px",
+                fontSize: "clamp(64px, 7vw, 96px)",
                 fontWeight: 300,
                 lineHeight: "100%",
                 letterSpacing: 0,
@@ -195,7 +194,7 @@ export default function Hero() {
           </AnimatePresence>
         </div>
 
-        {/* CTA button — right below the word rotator */}
+        {/* CTA button */}
         <div className="mt-8" style={{ pointerEvents: "auto" }}>
           <a
             href="/contact"
@@ -213,70 +212,193 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Left side: Cycling card stack with animation */}
+      {/* Left side: 3 visible stacked cards — hidden on mobile */}
       <div
-        className="absolute"
+        className="hidden md:block absolute"
         style={{
-          left: "3%",
+          left: "clamp(1.5rem, 3%, 2.5rem)",
           top: "50%",
           transform: "translateY(-50%)",
-          width: "min(320px, 28%)",
-          paddingTop: "var(--nav-height)",
+          width: "min(280px, 22vw)",
           zIndex: 2,
         }}
       >
-        <div className="relative" style={{ height: "320px" }}>
-          {visibleCards.map((card, i) => (
-            <motion.div
-              key={`${card.num}-${cardIndex}`}
-              className="absolute w-full rounded-2xl border p-4 flex flex-col justify-between"
-              style={{
-                top: `${i * 18}px`,
-                left: `${i * 8}px`,
-                right: `${i * -8}px`,
-                height: "160px",
-                background: "var(--astra-0)",
-                borderColor: "var(--astra-400)",
-                boxShadow: "0 2px 12px rgba(39,25,0,0.06)",
-                zIndex: 3 - i,
-                opacity: 1 - i * 0.25,
-                scale: 1 - i * 0.03,
-              }}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1 - i * 0.25,
-                y: 0,
-                scale: 1 - i * 0.03,
-              }}
-              transition={{ duration: 0.4, delay: i * 0.05 }}
-            >
-              <div>
-                <span
-                  className="text-xs font-mono mb-2 block"
-                  style={{ color: "var(--astra-2000-40)" }}
-                >
-                  {card.num}
-                </span>
-                <p
-                  className="text-sm leading-snug"
-                  style={{ color: "var(--astra-2000)" }}
-                >
-                  {card.text}
-                </p>
-              </div>
-              <div>
-                <span
-                  className="text-xs font-mono px-2 py-1 rounded-full"
+        {/* 3 stacked cards, front one swaps with animation */}
+        <div className="relative" style={{ height: "260px" }}>
+          {[0, 1, 2].map((offset) => {
+            const card = getCard(offset);
+            return (
+              <AnimatePresence key={offset} mode="popLayout">
+                <motion.div
+                  key={`${card.num}-${cardIndex}-${offset}`}
+                  className="absolute w-full border flex flex-col justify-between"
                   style={{
-                    background: "var(--astra-300)",
-                    color: "var(--astra-2000-60)",
+                    top: `${offset * 16}px`,
+                    left: `${offset * 6}px`,
+                    height: "150px",
+                    borderRadius: "12px",
+                    borderColor: "var(--astra-2000-10)",
+                    boxShadow: `0 ${2 + offset * 2}px ${8 + offset * 4}px rgba(39,25,0,${0.06 - offset * 0.015})`,
+                    zIndex: 3 - offset,
+                    padding: "0.75rem 1rem",
+                    overflow: "hidden",
                   }}
+                  initial={offset === 0 ? { opacity: 0, y: -20, scale: 1 } : false}
+                  animate={{
+                    opacity: 1 - offset * 0.2,
+                    y: 0,
+                    scale: 1 - offset * 0.04,
+                  }}
+                  exit={offset === 0 ? { opacity: 0, y: 20 } : undefined}
+                  transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
                 >
-                  {card.tag}
-                </span>
-              </div>
-            </motion.div>
-          ))}
+                  {/* Glass background */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "rgba(255,255,255,0.7)",
+                      backdropFilter: "blur(20px)",
+                      WebkitBackdropFilter: "blur(20px)",
+                      borderRadius: "12px",
+                      zIndex: 0,
+                      pointerEvents: "none",
+                    }}
+                  />
+                  {/* Content */}
+                  <div style={{ position: "relative", zIndex: 1 }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--nimbus-font-mono)",
+                        fontSize: "0.7rem",
+                        color: "var(--astra-2000-40)",
+                        display: "block",
+                        marginBottom: "0.25rem",
+                      }}
+                    >
+                      {card.num}
+                    </span>
+                    <p
+                      style={{
+                        fontSize: "0.8125rem",
+                        lineHeight: 1.4,
+                        color: "var(--astra-2000)",
+                        margin: 0,
+                        display: "-webkit-box",
+                        WebkitLineClamp: 3,
+                        WebkitBoxOrient: "vertical" as const,
+                        overflow: "hidden",
+                      }}
+                    >
+                      {card.text}
+                    </p>
+                  </div>
+                  <div style={{ position: "relative", zIndex: 1 }}>
+                    <span
+                      style={{
+                        fontFamily: "var(--nimbus-font-mono)",
+                        fontSize: "0.7rem",
+                        color: "var(--astra-2000-60)",
+                        background: "var(--astra-300)",
+                        padding: "2px 8px",
+                        borderRadius: "9999px",
+                      }}
+                    >
+                      {card.tag}
+                    </span>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* ===== MOBILE LAYOUT ===== */}
+      <div
+        className="md:hidden absolute inset-0 flex flex-col items-center justify-center px-6"
+        style={{ zIndex: 2 }}
+      >
+        <h1
+          style={{
+            fontFamily: "var(--nimbus-font-serif)",
+            color: "var(--astra-2000)",
+            fontSize: "56px",
+            fontWeight: 300,
+            lineHeight: "100%",
+            letterSpacing: 0,
+            textAlign: "center",
+          }}
+        >
+          Wedge
+        </h1>
+
+        {/* Word rotator — mobile */}
+        <div
+          style={{
+            textAlign: "center",
+            width: "100%",
+            height: "56px",
+            fontSize: "56px",
+            lineHeight: "100%",
+            position: "relative",
+            overflow: "hidden",
+            marginTop: "0.25rem",
+          }}
+        >
+          <AnimatePresence mode="popLayout">
+            <motion.span
+              key={wordIndex}
+              initial={{ y: "40%", opacity: 0, filter: "blur(12px)" }}
+              animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
+              exit={{ y: "-40%", opacity: 0, filter: "blur(12px)" }}
+              transition={{ duration: 0.35, ease: [0.72, 0, 0.12, 1] }}
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                fontFamily: "var(--nimbus-font-serif)",
+                color: "var(--astra-2000-60)",
+                fontSize: "56px",
+                fontWeight: 300,
+                lineHeight: "100%",
+                letterSpacing: 0,
+                textAlign: "center",
+              }}
+            >
+              {rotatingWords[wordIndex]}
+            </motion.span>
+          </AnimatePresence>
+        </div>
+
+        <p
+          className="mt-6 text-center"
+          style={{
+            color: "var(--astra-2000-60)",
+            fontSize: "1rem",
+            lineHeight: 1.6,
+            maxWidth: "20rem",
+          }}
+        >
+          AI consulting that builds real tools for traditional businesses.
+        </p>
+
+        {/* CTA button — mobile */}
+        <div className="mt-8">
+          <a
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
+            style={{
+              background: "var(--astra-2000)",
+              color: "var(--astra-200)",
+            }}
+          >
+            Start a Conversation
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -293,7 +415,7 @@ export default function Hero() {
 
       {/* Bottom right: SOUND toggle */}
       <button
-        className="absolute bottom-6 right-6 flex items-center gap-2 text-xs font-mono tracking-widest transition-opacity hover:opacity-70"
+        className="absolute bottom-6 right-6 hidden md:flex items-center gap-2 text-xs font-mono tracking-widest transition-opacity hover:opacity-70"
         style={{ color: "var(--astra-2000-60)", zIndex: 2 }}
         onClick={() => {
           setSoundOff(!soundOff);
