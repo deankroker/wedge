@@ -212,106 +212,97 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Left side: 3 visible stacked cards — hidden on mobile */}
+      {/* Left side: 3 fully visible cards in a vertical column — hidden on mobile */}
       <div
-        className="hidden md:block absolute"
+        className="hidden md:flex flex-col gap-4 absolute"
         style={{
           left: "clamp(1.5rem, 3%, 2.5rem)",
-          top: "50%",
-          transform: "translateY(-50%)",
-          width: "min(280px, 22vw)",
+          top: "10.5rem",
+          width: "min(240px, 20vw)",
           zIndex: 2,
         }}
       >
-        {/* 3 stacked cards, front one swaps with animation */}
-        <div className="relative" style={{ height: "260px" }}>
-          {[0, 1, 2].map((offset) => {
-            const card = getCard(offset);
-            return (
-              <AnimatePresence key={offset} mode="popLayout">
-                <motion.div
-                  key={`${card.num}-${cardIndex}-${offset}`}
-                  className="absolute w-full border flex flex-col justify-between"
+        {[0, 1, 2].map((offset) => {
+          const card = getCard(offset);
+          return (
+            <AnimatePresence key={offset} mode="popLayout">
+              <motion.div
+                key={`${card.num}-${cardIndex}-${offset}`}
+                className="border flex flex-col justify-between"
+                style={{
+                  height: "140px",
+                  borderRadius: "8px",
+                  borderColor: "var(--astra-2000-10)",
+                  boxShadow: "0 2px 12px rgba(39,25,0,0.06)",
+                  padding: "0.75rem 1rem",
+                  overflow: "hidden",
+                  position: "relative",
+                  opacity: 1 - offset * 0.15,
+                }}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1 - offset * 0.15, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.4, delay: offset * 0.06, ease: [0.25, 0.1, 0.25, 1] }}
+              >
+                {/* Glass background */}
+                <div
                   style={{
-                    top: `${offset * 16}px`,
-                    left: `${offset * 6}px`,
-                    height: "150px",
-                    borderRadius: "12px",
-                    borderColor: "var(--astra-2000-10)",
-                    boxShadow: `0 ${2 + offset * 2}px ${8 + offset * 4}px rgba(39,25,0,${0.06 - offset * 0.015})`,
-                    zIndex: 3 - offset,
-                    padding: "0.75rem 1rem",
-                    overflow: "hidden",
+                    position: "absolute",
+                    inset: 0,
+                    background: "rgba(255,255,255,0.7)",
+                    backdropFilter: "blur(20px)",
+                    WebkitBackdropFilter: "blur(20px)",
+                    borderRadius: "8px",
+                    zIndex: 0,
+                    pointerEvents: "none",
                   }}
-                  initial={offset === 0 ? { opacity: 0, y: -20, scale: 1 } : false}
-                  animate={{
-                    opacity: 1 - offset * 0.2,
-                    y: 0,
-                    scale: 1 - offset * 0.04,
-                  }}
-                  exit={offset === 0 ? { opacity: 0, y: 20 } : undefined}
-                  transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-                >
-                  {/* Glass background */}
-                  <div
+                />
+                {/* Content */}
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <span
                     style={{
-                      position: "absolute",
-                      inset: 0,
-                      background: "rgba(255,255,255,0.7)",
-                      backdropFilter: "blur(20px)",
-                      WebkitBackdropFilter: "blur(20px)",
-                      borderRadius: "12px",
-                      zIndex: 0,
-                      pointerEvents: "none",
+                      fontFamily: "var(--nimbus-font-mono)",
+                      fontSize: "0.7rem",
+                      color: "var(--astra-2000-40)",
+                      display: "block",
+                      marginBottom: "0.25rem",
                     }}
-                  />
-                  {/* Content */}
-                  <div style={{ position: "relative", zIndex: 1 }}>
-                    <span
-                      style={{
-                        fontFamily: "var(--nimbus-font-mono)",
-                        fontSize: "0.7rem",
-                        color: "var(--astra-2000-40)",
-                        display: "block",
-                        marginBottom: "0.25rem",
-                      }}
-                    >
-                      {card.num}
-                    </span>
-                    <p
-                      style={{
-                        fontSize: "0.8125rem",
-                        lineHeight: 1.4,
-                        color: "var(--astra-2000)",
-                        margin: 0,
-                        display: "-webkit-box",
-                        WebkitLineClamp: 3,
-                        WebkitBoxOrient: "vertical" as const,
-                        overflow: "hidden",
-                      }}
-                    >
-                      {card.text}
-                    </p>
-                  </div>
-                  <div style={{ position: "relative", zIndex: 1 }}>
-                    <span
-                      style={{
-                        fontFamily: "var(--nimbus-font-mono)",
-                        fontSize: "0.7rem",
-                        color: "var(--astra-2000-60)",
-                        background: "var(--astra-300)",
-                        padding: "2px 8px",
-                        borderRadius: "9999px",
-                      }}
-                    >
-                      {card.tag}
-                    </span>
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            );
-          })}
-        </div>
+                  >
+                    {card.num}
+                  </span>
+                  <p
+                    style={{
+                      fontSize: "0.8125rem",
+                      lineHeight: 1.4,
+                      color: "var(--astra-2000)",
+                      margin: 0,
+                      display: "-webkit-box",
+                      WebkitLineClamp: 3,
+                      WebkitBoxOrient: "vertical" as const,
+                      overflow: "hidden",
+                    }}
+                  >
+                    {card.text}
+                  </p>
+                </div>
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--nimbus-font-mono)",
+                      fontSize: "0.7rem",
+                      color: "var(--astra-2000-60)",
+                      background: "var(--astra-300)",
+                      padding: "2px 8px",
+                      borderRadius: "9999px",
+                    }}
+                  >
+                    {card.tag}
+                  </span>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          );
+        })}
       </div>
 
       {/* ===== MOBILE LAYOUT ===== */}
