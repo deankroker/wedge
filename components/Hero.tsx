@@ -257,7 +257,7 @@ export default function Hero() {
                 overflow: "hidden",
                 position: "relative",
                 transition: "border-color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease",
-                opacity: isActive ? 1 : 0.55,
+                opacity: isActive ? 1 : 0.65,
               }}
             >
               {/* Glass background */}
