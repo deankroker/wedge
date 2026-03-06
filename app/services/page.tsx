@@ -39,10 +39,10 @@ const tiers = [
     href: "mailto:dean@westernhemlock.com?subject=Build%20Engagement",
   },
   {
-    name: "Operate",
-    tagline: "We run it with you.",
+    name: "Accelerate",
+    tagline: "We level up your team.",
     description:
-      "The tools are built. Now we make sure they keep getting better. Operate is our ongoing partnership model — we embed with your team, optimize what's running, and continuously ship new capabilities as AI evolves.",
+      "The tools are built. Now your team needs to fly. Accelerate is how we transfer the capability — embedding with your people, training them on AI-native workflows, and continuously shipping new tools as the technology evolves. You don't just get software. You get a team that builds like we do.",
     includes: [
       "Ongoing optimization of deployed AI systems",
       "New tool development as needs emerge",
@@ -51,8 +51,8 @@ const tiers = [
       "Priority access for urgent builds and pivots",
     ],
     bestFor: "Companies that want a permanent edge. Teams that see AI as a core competency, not a one-time project.",
-    cta: "Explore Operate",
-    href: "mailto:dean@westernhemlock.com?subject=Operate%20Engagement",
+    cta: "Explore Accelerate",
+    href: "mailto:dean@westernhemlock.com?subject=Accelerate%20Engagement",
   },
 ];
 
