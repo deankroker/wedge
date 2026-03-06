@@ -44,7 +44,6 @@ function WedgeIcon() {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: "inline-block", verticalAlign: "middle" }}
       >
-        {/* Wedge / triangle element */}
         <polygon
           points="22,4 40,38 4,38"
           fill="none"
@@ -80,10 +79,11 @@ function ManifestoParagraph({
         className="leading-tight"
         style={{
           fontFamily: "var(--nimbus-font-serif)",
-          fontSize: "clamp(1.75rem, 3.5vw, 3rem)",
+          fontSize: "clamp(1.5rem, 2.8vw, 2.25rem)",
           color: "var(--astra-2000)",
           letterSpacing: "-0.01em",
           fontWeight: 400,
+          lineHeight: 1.4,
         }}
       >
         {children}
@@ -100,8 +100,8 @@ export default function Manifesto() {
       style={{ background: "var(--astra-200)" }}
     >
       <div
-        className="mx-auto flex flex-col gap-16"
-        style={{ maxWidth: "72rem" }}
+        className="mx-auto flex flex-col gap-12"
+        style={{ maxWidth: "32rem" }}
       >
         {paragraphs.map((p, i) => (
           <ManifestoParagraph key={p.id} delay={i * 0.1}>

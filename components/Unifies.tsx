@@ -11,6 +11,7 @@ export default function Unifies() {
   });
 
   const titleOpacity = useTransform(scrollYProgress, [0.2, 0.35, 0.65, 0.8], [0, 1, 1, 0]);
+  const titleY = useTransform(scrollYProgress, [0.2, 0.35, 0.65, 0.8], [40, 0, 0, -40]);
   const bgOpacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0]);
   const gradientTopOpacity = useTransform(scrollYProgress, [0, 0.12], [1, 0]);
   const gradientBottomOpacity = useTransform(scrollYProgress, [0.88, 1], [0, 1]);
@@ -27,9 +28,9 @@ export default function Unifies() {
       >
         {/* Black base */}
         <div className="absolute inset-0" style={{ background: "#000", zIndex: 1 }} />
-        {/* Nature image — dark forest canopy */}
+        {/* Original Perplexity nature image at 60% opacity */}
         <img
-          src="https://images.unsplash.com/photo-1731508257431-05eed6a6fc45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4ODAzOTJ8MHwxfHNlYXJjaHwxfHxkYXJrJTIwZm9yZXN0JTIwY2Fub3B5JTIwYWVyaWFsfGVufDB8MHx8fDE3NzI4MzQ1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://res.cloudinary.com/pplx/image/upload/t_w2400/pplx-web/Computer/images/step-bg-01.webp"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
           style={{ opacity: 0.6, zIndex: 2 }}
@@ -76,12 +77,13 @@ export default function Unifies() {
             top: 0,
           }}
         >
-          {/* Title */}
+          {/* Title with vertical motion */}
           <motion.div
             className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none"
             style={{
               zIndex: 5,
               opacity: titleOpacity,
+              y: titleY,
             }}
           >
             <h2
@@ -99,7 +101,7 @@ export default function Unifies() {
             </h2>
             <p
               style={{
-                color: "var(--astra-200-60)",
+                color: "var(--astra-200-60, rgba(250,248,245,0.6))",
                 fontFamily: "var(--nimbus-font-sans)",
                 textAlign: "center",
                 fontSize: "18px",
@@ -111,6 +113,28 @@ export default function Unifies() {
             >
               We find the single point of highest leverage in your business — then drive AI straight through it.
             </p>
+
+            {/* Scroll indicator — keep scrolling */}
+            <motion.div
+              className="mt-12 flex flex-col items-center gap-2"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            >
+              <span
+                style={{
+                  color: "var(--astra-200-60, rgba(250,248,245,0.4))",
+                  fontSize: "12px",
+                  fontFamily: "var(--nimbus-font-mono)",
+                  letterSpacing: "2px",
+                  textTransform: "uppercase",
+                }}
+              >
+                Keep scrolling
+              </span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 4v12M6 12l4 4 4-4" stroke="rgba(250,248,245,0.4)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </motion.div>
           </motion.div>
 
           {/* Decorative helix lines */}
