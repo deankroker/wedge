@@ -59,7 +59,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <OutpostIcon size={18} />
+          <OutpostIcon size={18} fill={dark ? "#d6d5d4" : "#271a00"} />
           <span
             className={`text-2xl font-light tracking-tight ${textColor}`}
             style={{ fontFamily: "var(--nimbus-font-serif)" }}

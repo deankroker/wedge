@@ -39,32 +39,16 @@ function OutpostIcon() {
       <svg
         width="44"
         height="44"
-        viewBox="0 0 44 44"
+        viewBox="0 0 20 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: "inline-block", verticalAlign: "middle" }}
       >
-        <circle
-          cx="22"
-          cy="22"
-          r="18"
-          fill="none"
-          stroke="var(--astra-2000)"
-          strokeWidth="2.5"
-        />
-        <circle
-          cx="22"
-          cy="22"
-          r="10"
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M0 24V10C0 4.477 4.477 0 10 0s10 4.477 10 10v14H0ZM6 24V13c0-2.21 1.79-4 4-4s4 1.79 4 4v11H6Z"
           fill="var(--astra-2000)"
-          opacity="0.15"
-        />
-        <circle
-          cx="22"
-          cy="22"
-          r="4"
-          fill="var(--astra-2000)"
-          opacity="0.4"
         />
       </svg>
     </span>

@@ -1,0 +1,877 @@
+{
+  "version": "2.8",
+  "children": [
+    {
+      "type": "frame",
+      "id": "yo0lz",
+      "x": 0,
+      "y": 0,
+      "name": "Icon Variants",
+      "fill": "#FAF8F5",
+      "gap": 24,
+      "padding": 32,
+      "children": [
+        {
+          "type": "frame",
+          "id": "8tQR0",
+          "name": "Arch Dark",
+          "width": 80,
+          "height": 80,
+          "fill": "#000000",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "UZ8rt",
+              "x": 24,
+              "y": 24,
+              "name": "arch1",
+              "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+              "fillRule": "evenodd",
+              "fill": "#D6D5D4",
+              "width": 32,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "NwEot",
+          "name": "Arch Light",
+          "width": 80,
+          "height": 80,
+          "fill": "#FAF8F5",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "NzHru",
+              "x": 24,
+              "y": 24,
+              "name": "arch2",
+              "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+              "fillRule": "evenodd",
+              "fill": "#271A00",
+              "width": 32,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vjzR9",
+          "name": "X Dark",
+          "width": 80,
+          "height": 80,
+          "fill": "#000000",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "sEEJc",
+              "x": 28,
+              "y": 28,
+              "name": "x1",
+              "geometry": "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.966 6.817h-3.31l7.73-8.835-8.156-10.665h6.826l4.713 6.231z m-1.161 17.52h1.833l-11.832-15.644h-1.967z",
+              "fill": "#D6D5D4",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "8kcA6",
+          "name": "X Light",
+          "width": 80,
+          "height": 80,
+          "fill": "#FAF8F5",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "NMCxF",
+              "x": 28,
+              "y": 28,
+              "name": "x2",
+              "geometry": "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.966 6.817h-3.31l7.73-8.835-8.156-10.665h6.826l4.713 6.231z m-1.161 17.52h1.833l-11.832-15.644h-1.967z",
+              "fill": "#271A00",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "zYzEH",
+          "name": "LinkedIn Dark",
+          "width": 80,
+          "height": 80,
+          "fill": "#000000",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "qmFeB",
+              "x": 28,
+              "y": 28,
+              "name": "li1",
+              "geometry": "M20.447 20.452h-3.554v-5.569c0-1.328-0.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554v-11.452h3.414v1.561h0.046c0.477-0.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z m-15.11-13.019a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065z m1.782 13.019h-3.564v-11.452h3.564v11.452z m15.106-20.452h-20.454c-0.979 0-1.771 0.774-1.771 1.729v20.542c0 0.956 0.792 1.729 1.771 1.729h20.451c0.978 0 1.778-0.773 1.778-1.729v-20.542c0-0.955-0.8-1.729-1.778-1.729h0.003z",
+              "fill": "#D6D5D4",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ejOvG",
+          "name": "LinkedIn Light",
+          "width": 80,
+          "height": 80,
+          "fill": "#FAF8F5",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "aStLO",
+              "x": 28,
+              "y": 28,
+              "name": "li2",
+              "geometry": "M20.447 20.452h-3.554v-5.569c0-1.328-0.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667h-3.554v-11.452h3.414v1.561h0.046c0.477-0.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286z m-15.11-13.019a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065z m1.782 13.019h-3.564v-11.452h3.564v11.452z m15.106-20.452h-20.454c-0.979 0-1.771 0.774-1.771 1.729v20.542c0 0.956 0.792 1.729 1.771 1.729h20.451c0.978 0 1.778-0.773 1.778-1.729v-20.542c0-0.955-0.8-1.729-1.778-1.729h0.003z",
+              "fill": "#271A00",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "1oOeT",
+          "name": "GitHub Dark",
+          "width": 80,
+          "height": 80,
+          "fill": "#000000",
+          "cornerRadius": 12,
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "5nZOI",
+              "x": 28,
+              "y": 28,
+              "name": "gh1",
+              "geometry": "M12 0c-6.63 0-12 5.37-12 12 0 5.31 3.435 9.795 8.205 11.385 0.6 0.105 0.825-0.255 0.825-0.57 0-0.285-0.015-1.23-0.015-2.235-3.015 0.555-3.795-0.735-4.035-1.41-0.135-0.345-0.72-1.41-1.23-1.695-0.42-0.225-1.02-0.78-0.015-0.795 0.945-0.015 1.62 0.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495 0.99 0.105-0.78 0.42-1.305 0.765-1.605-2.67-0.3-5.46-1.335-5.46-5.925 0-1.305 0.465-2.385 1.23-3.225-0.12-0.3-0.54-1.53 0.12-3.18 0 0 1.005-0.315 3.3 1.23 0.96-0.27 1.98-0.405 3-0.405s2.04 0.135 3 0.405c2.295-1.56 3.3-1.23 3.3-1.23 0.66 1.65 0.24 2.88 0.12 3.18 0.765 0.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925 0.435 0.375 0.81 1.095 0.81 2.22 0 1.605-0.015 2.895-0.015 3.3 0 0.315 0.225 0.69 0.825 0.57a12.02 12.02 0 0 0 8.175-11.385c0-6.63-5.37-12-12-12z",
+              "fillRule": "evenodd",
+              "fill": "#D6D5D4",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Gomcb",
+          "name": "GitHub Light",
+          "width": 80,
+          "height": 80,
+          "fill": "#FAF8F5",
+          "cornerRadius": 12,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          },
+          "layout": "none",
+          "children": [
+            {
+              "type": "path",
+              "id": "K4iJG",
+              "x": 28,
+              "y": 28,
+              "name": "gh2",
+              "geometry": "M12 0c-6.63 0-12 5.37-12 12 0 5.31 3.435 9.795 8.205 11.385 0.6 0.105 0.825-0.255 0.825-0.57 0-0.285-0.015-1.23-0.015-2.235-3.015 0.555-3.795-0.735-4.035-1.41-0.135-0.345-0.72-1.41-1.23-1.695-0.42-0.225-1.02-0.78-0.015-0.795 0.945-0.015 1.62 0.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495 0.99 0.105-0.78 0.42-1.305 0.765-1.605-2.67-0.3-5.46-1.335-5.46-5.925 0-1.305 0.465-2.385 1.23-3.225-0.12-0.3-0.54-1.53 0.12-3.18 0 0 1.005-0.315 3.3 1.23 0.96-0.27 1.98-0.405 3-0.405s2.04 0.135 3 0.405c2.295-1.56 3.3-1.23 3.3-1.23 0.66 1.65 0.24 2.88 0.12 3.18 0.765 0.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925 0.435 0.375 0.81 1.095 0.81 2.22 0 1.605-0.015 2.895-0.015 3.3 0 0.315 0.225 0.69 0.825 0.57a12.02 12.02 0 0 0 8.175-11.385c0-6.63-5.37-12-12-12z",
+              "fillRule": "evenodd",
+              "fill": "#271A00",
+              "width": 24,
+              "height": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "idjvq",
+      "x": 0,
+      "y": 220,
+      "name": "OG Banner (1200x630)",
+      "width": 1200,
+      "height": 630,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "path",
+          "id": "jIx4Q",
+          "x": 480,
+          "y": 179,
+          "name": "arch",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 67,
+          "height": 80
+        },
+        {
+          "type": "text",
+          "id": "e09AM",
+          "x": 575,
+          "y": 200,
+          "name": "wordmark",
+          "fill": "#271A00",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 64,
+          "fontWeight": "300",
+          "letterSpacing": -0.02
+        },
+        {
+          "type": "text",
+          "id": "G5Tp1",
+          "x": 430,
+          "y": 340,
+          "name": "tagline",
+          "fill": "#271A0099",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 36,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "hAS5W",
+          "x": 530,
+          "y": 560,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 18,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        },
+        {
+          "type": "rectangle",
+          "id": "NzSKG",
+          "x": 0,
+          "y": 622,
+          "name": "accentBar",
+          "fill": "#271A00",
+          "width": 1200,
+          "height": 8
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "4Z9KO",
+      "x": 0,
+      "y": 880,
+      "name": "Twitter Banner (1500x500)",
+      "width": 1500,
+      "height": 500,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "6dt3h",
+          "x": 0,
+          "y": 0,
+          "name": "topLine",
+          "fill": "#FFFFFF33",
+          "width": 1500,
+          "height": 2
+        },
+        {
+          "type": "rectangle",
+          "id": "eTukC",
+          "x": 0,
+          "y": 498,
+          "name": "btmLine",
+          "fill": "#FFFFFF33",
+          "width": 1500,
+          "height": 2
+        },
+        {
+          "type": "path",
+          "id": "0jzOh",
+          "x": 710.5,
+          "y": 120,
+          "name": "arch",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 48,
+          "height": 58
+        },
+        {
+          "type": "text",
+          "id": "ZBrfv",
+          "x": 643,
+          "y": 200,
+          "name": "wordmark",
+          "fill": "#D6D5D4",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300",
+          "letterSpacing": -0.02
+        },
+        {
+          "type": "text",
+          "id": "OPG3g",
+          "x": 590,
+          "y": 300,
+          "name": "tagline",
+          "fill": "#D6D5D499",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 28,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "aoQYJ",
+          "x": 680,
+          "y": 430,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "UR1lC",
+      "x": 0,
+      "y": 1410,
+      "name": "LinkedIn Banner (1128x191)",
+      "width": 1128,
+      "height": 191,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "R0KqY",
+          "x": 0,
+          "y": 0,
+          "name": "topLine",
+          "fill": "#FFFFFF33",
+          "width": 1128,
+          "height": 1
+        },
+        {
+          "type": "rectangle",
+          "id": "rC9Ax",
+          "x": 0,
+          "y": 190,
+          "name": "btmLine",
+          "fill": "#FFFFFF33",
+          "width": 1128,
+          "height": 1
+        },
+        {
+          "type": "path",
+          "id": "z4btU",
+          "x": 540,
+          "y": 30,
+          "name": "arch",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 24,
+          "height": 29
+        },
+        {
+          "type": "text",
+          "id": "5kITO",
+          "x": 500,
+          "y": 75,
+          "name": "wordmark",
+          "fill": "#D6D5D4",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 32,
+          "fontWeight": "300",
+          "letterSpacing": -0.02
+        },
+        {
+          "type": "text",
+          "id": "Qxn43",
+          "x": 470,
+          "y": 125,
+          "name": "tagline",
+          "fill": "#D6D5D499",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 16,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "9DAI8",
+          "x": 520,
+          "y": 160,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 11,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "THbKh",
+      "x": 0,
+      "y": 1630,
+      "name": "Quote Card Dark (1080x1080)",
+      "width": 1080,
+      "height": 1080,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "0nJlZ",
+          "x": 140,
+          "y": 320,
+          "name": "quote",
+          "fill": "#D6D5D4",
+          "textGrowth": "fixed-width",
+          "width": 800,
+          "content": "\"Your next app doesn't need a 6-month roadmap. It needs a clear description and someone who ships.\"",
+          "lineHeight": 1.3,
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 48,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "UYGFs",
+          "x": 140,
+          "y": 700,
+          "name": "subtitle",
+          "fill": "#D6D5D499",
+          "content": "— Outpost",
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "Zu3Kw",
+          "x": 520,
+          "y": 80,
+          "name": "watermark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D466",
+          "width": 40,
+          "height": 48
+        },
+        {
+          "type": "text",
+          "id": "NDIsC",
+          "x": 470,
+          "y": 1020,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "eoCRn",
+      "x": 1120,
+      "y": 1630,
+      "name": "Quote Card Light (1080x1080)",
+      "width": 1080,
+      "height": 1080,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "zj5Fy",
+          "x": 100,
+          "y": 340,
+          "name": "accentBar",
+          "fill": "#271A00",
+          "width": 4,
+          "height": 200
+        },
+        {
+          "type": "text",
+          "id": "78qMi",
+          "x": 140,
+          "y": 340,
+          "name": "quote",
+          "fill": "#271A00",
+          "textGrowth": "fixed-width",
+          "width": 780,
+          "content": "\"We don't do sprints. We do weekends. Your app ships before your coffee gets cold.\"",
+          "lineHeight": 1.3,
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 48,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "DLPO7",
+          "x": 140,
+          "y": 700,
+          "name": "subtitle",
+          "fill": "#271A0099",
+          "content": "— Outpost",
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "DsjPh",
+          "x": 520,
+          "y": 80,
+          "name": "watermark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A0066",
+          "width": 40,
+          "height": 48
+        },
+        {
+          "type": "text",
+          "id": "DNUoI",
+          "x": 470,
+          "y": 1020,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "BlZ4G",
+      "x": 0,
+      "y": 2740,
+      "name": "Stat Card (1200x630)",
+      "width": 1200,
+      "height": 630,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "PAbDW",
+          "x": 100,
+          "y": 120,
+          "name": "bigNum",
+          "fill": "#D6D5D4",
+          "content": "40+",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 180,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "QvXcL",
+          "x": 100,
+          "y": 380,
+          "name": "label",
+          "fill": "#D6D5D499",
+          "content": "Apps shipped in 90 days",
+          "fontFamily": "Inter",
+          "fontSize": 32,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "b39ZH",
+          "x": 100,
+          "y": 440,
+          "name": "detail",
+          "fill": "#D6D5D466",
+          "textGrowth": "fixed-width",
+          "width": 600,
+          "content": "From idea to production — dashboards, automations, AI tools, and full-stack webapps.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 20,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "NNjkR",
+          "x": 1100,
+          "y": 40,
+          "name": "watermark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D466",
+          "width": 32,
+          "height": 38
+        },
+        {
+          "type": "text",
+          "id": "nZNPV",
+          "x": 1040,
+          "y": 580,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Oq88I",
+      "x": 0,
+      "y": 3400,
+      "name": "Case Study Card (1200x630)",
+      "width": 1200,
+      "height": 630,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "sILkh",
+          "x": 100,
+          "y": 60,
+          "name": "badge",
+          "fill": "#271A0099",
+          "content": "CASE STUDY",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 12,
+          "fontWeight": "600",
+          "letterSpacing": 0.2
+        },
+        {
+          "type": "text",
+          "id": "37pzA",
+          "x": 100,
+          "y": 100,
+          "name": "title",
+          "fill": "#271A00",
+          "textGrowth": "fixed-width",
+          "width": 700,
+          "content": "Internal ops dashboard that replaced 3 spreadsheets and 2 weekly meetings.",
+          "lineHeight": 1.3,
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 36,
+          "fontWeight": "300"
+        },
+        {
+          "type": "rectangle",
+          "id": "i4xkW",
+          "x": 100,
+          "y": 280,
+          "name": "divider",
+          "fill": "#271A001A",
+          "width": 700,
+          "height": 1
+        },
+        {
+          "type": "text",
+          "id": "WWEft",
+          "x": 100,
+          "y": 310,
+          "name": "beforeLabel",
+          "fill": "#271A0066",
+          "content": "BEFORE",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 11,
+          "fontWeight": "600",
+          "letterSpacing": 0.2
+        },
+        {
+          "type": "text",
+          "id": "vpT63",
+          "x": 100,
+          "y": 340,
+          "name": "beforeText",
+          "fill": "#271A0099",
+          "textGrowth": "fixed-width",
+          "width": 400,
+          "content": "3 spreadsheets, 2 weekly sync meetings, manual data entry across teams",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "nuKB1",
+          "x": 100,
+          "y": 430,
+          "name": "afterLabel",
+          "fill": "#271A0066",
+          "content": "AFTER",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 11,
+          "fontWeight": "600",
+          "letterSpacing": 0.2
+        },
+        {
+          "type": "text",
+          "id": "SKldL",
+          "x": 100,
+          "y": 460,
+          "name": "afterText",
+          "fill": "#271A00",
+          "textGrowth": "fixed-width",
+          "width": 400,
+          "content": "Single dashboard, real-time data, zero manual entry. Built in 4 days.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "89BKb",
+          "x": 1100,
+          "y": 40,
+          "name": "watermark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A0066",
+          "width": 32,
+          "height": 38
+        },
+        {
+          "type": "text",
+          "id": "2z8BS",
+          "x": 1040,
+          "y": 580,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        },
+        {
+          "type": "rectangle",
+          "id": "rkcPD",
+          "x": 0,
+          "y": 624,
+          "name": "accentBar",
+          "fill": "#271A00",
+          "width": 1200,
+          "height": 6
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "$accent-blue-bg": {
+      "type": "color",
+      "value": "#DEEAFC"
+    },
+    "$accent-blue-text": {
+      "type": "color",
+      "value": "#2640A8"
+    },
+    "$astra-bg": {
+      "type": "color",
+      "value": "#FAF8F5"
+    },
+    "$astra-border": {
+      "type": "color",
+      "value": "#271A001A"
+    },
+    "$astra-surface": {
+      "type": "color",
+      "value": "#F3F0EC"
+    },
+    "$astra-text": {
+      "type": "color",
+      "value": "#271A00"
+    },
+    "$astra-text-muted": {
+      "type": "color",
+      "value": "#271A0099"
+    },
+    "$astra-text-subtle": {
+      "type": "color",
+      "value": "#271A0066"
+    },
+    "$umbra-bg": {
+      "type": "color",
+      "value": "#000000"
+    },
+    "$umbra-border": {
+      "type": "color",
+      "value": "#FFFFFF33"
+    },
+    "$umbra-surface": {
+      "type": "color",
+      "value": "#1E1D1C"
+    },
+    "$umbra-text": {
+      "type": "color",
+      "value": "#D6D5D4"
+    },
+    "$umbra-text-muted": {
+      "type": "color",
+      "value": "#D6D5D499"
+    },
+    "$umbra-text-subtle": {
+      "type": "color",
+      "value": "#D6D5D466"
+    }
+  }
+}

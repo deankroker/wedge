@@ -57,7 +57,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setWordIndex((i) => (i + 1) % rotatingWords.length);
-    }, 800);
+    }, 2000);
     return () => clearInterval(interval);
   }, []);
 
@@ -127,9 +127,9 @@ export default function Hero() {
             textAlign: "right",
             width: "100%",
             minWidth: "10ch",
-            height: "1em",
+            height: "1.15em",
             fontSize: "clamp(64px, 7vw, 96px)",
-            lineHeight: "100%",
+            lineHeight: "115%",
             position: "relative",
             overflow: "hidden",
           }}
@@ -152,7 +152,7 @@ export default function Hero() {
                 color: "var(--astra-2000-60)",
                 fontSize: "clamp(64px, 7vw, 96px)",
                 fontWeight: 300,
-                lineHeight: "100%",
+                lineHeight: "115%",
                 letterSpacing: 0,
                 textAlign: "right",
               }}
@@ -196,7 +196,7 @@ export default function Hero() {
           return (
             <div
               key={slot}
-              className="border flex flex-col justify-between"
+              className="border"
               style={{
                 height: "140px",
                 borderRadius: "8px",
@@ -204,7 +204,6 @@ export default function Hero() {
                 boxShadow: isActive
                   ? "0 4px 20px rgba(39,25,0,0.12)"
                   : "0 2px 8px rgba(39,25,0,0.04)",
-                padding: "0.75rem 1rem",
                 overflow: "hidden",
                 position: "relative",
                 transition: "border-color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease",
@@ -212,15 +211,15 @@ export default function Hero() {
                 background: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.5)",
               }}
             >
-              {/* Content — fades in-place when card set changes */}
-              <AnimatePresence mode="wait">
+              {/* Content — cross-fades in-place when card set changes */}
+              <AnimatePresence mode="popLayout">
                 <motion.div
                   key={`${card.num}-${setIndex}`}
-                  style={{ position: "relative", zIndex: 1 }}
+                  style={{ position: "absolute", top: "0.75rem", left: "1rem", right: "1rem", zIndex: 1 }}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.35 }}
                 >
                   <span
                     style={{
@@ -249,8 +248,8 @@ export default function Hero() {
                   </p>
                 </motion.div>
               </AnimatePresence>
-              <div style={{ position: "relative", zIndex: 1 }}>
-                <AnimatePresence mode="wait">
+              <div style={{ position: "absolute", bottom: "0.75rem", left: "1rem", zIndex: 1 }}>
+                <AnimatePresence mode="popLayout">
                   <motion.span
                     key={`${card.tag}-${setIndex}`}
                     style={{
@@ -265,7 +264,7 @@ export default function Hero() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.35 }}
                   >
                     {card.tag}
                   </motion.span>
@@ -300,9 +299,9 @@ export default function Hero() {
           style={{
             textAlign: "center",
             width: "100%",
-            height: "56px",
+            height: "64px",
             fontSize: "56px",
-            lineHeight: "100%",
+            lineHeight: "115%",
             position: "relative",
             overflow: "hidden",
             marginTop: "0.25rem",
@@ -324,7 +323,7 @@ export default function Hero() {
                 color: "var(--astra-2000-60)",
                 fontSize: "56px",
                 fontWeight: 300,
-                lineHeight: "100%",
+                lineHeight: "115%",
                 letterSpacing: 0,
                 textAlign: "center",
               }}

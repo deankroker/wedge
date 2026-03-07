@@ -1,6 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import XIcon from "./XIcon";
+import LinkedInIcon from "./LinkedInIcon";
+import GitHubIcon from "./GitHubIcon";
+
+const socialLinks = [
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/outpost_chat",
+    icon: XIcon,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/104468632",
+    icon: LinkedInIcon,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/outpost_chat",
+    icon: GitHubIcon,
+  },
+];
 
 const columns = [
   {
@@ -90,19 +111,38 @@ export default function Footer() {
               >
                 {col.title}
               </h4>
-              <ul className="flex flex-col gap-3">
-                {col.links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm transition-opacity hover:opacity-70"
-                      style={{ color: "var(--umbra-1000)" }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              {col.title === "Follow Us" ? (
+                <ul className="flex flex-col gap-3">
+                  {socialLinks.map((link) => (
+                    <li key={link.label}>
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm transition-opacity hover:opacity-70 flex items-center gap-2"
+                        style={{ color: "var(--umbra-1000)" }}
+                      >
+                        {link.icon && <link.icon size={16} fill="var(--umbra-1000)" />}
+                        {link.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="flex flex-col gap-3">
+                  {col.links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        className="text-sm transition-opacity hover:opacity-70"
+                        style={{ color: "var(--umbra-1000)" }}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

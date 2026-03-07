@@ -9,21 +9,21 @@
   </radialGradient>
   <rect width="1500" height="500" fill="url(#glow)"/>
 
-  <!-- Accent line top -->
+  <!-- Accent lines -->
   <rect x="0" y="0" width="1500" height="2" fill="#D6D5D4" opacity="0.12"/>
+  <rect x="0" y="498" width="1500" height="2" fill="#D6D5D4" opacity="0.12"/>
 
-  <!-- Op logomark: circle -->
-  <circle cx="670" cy="220" r="44" fill="#D6D5D4"/>
+  <!-- Arch logomark -->
+  <g transform="translate(730, 130)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24V10C0 4.477 4.477 0 10 0s10 4.477 10 10v14H0ZM6 24V13c0-2.21 1.79-4 4-4s4 1.79 4 4v11H6Z" fill="#D6D5D4" transform="scale(2)"/>
+  </g>
 
-  <!-- Op logomark: p letter -->
-  <text x="726" y="260" font-family="Georgia, serif" font-size="100" font-weight="400" fill="#D6D5D4">p</text>
+  <!-- Wordmark -->
+  <text x="750" y="250" font-family="Georgia, serif" font-size="56" font-weight="300" fill="#D6D5D4" text-anchor="middle" letter-spacing="-0.02em">Outpost</text>
 
   <!-- Tagline -->
-  <text x="750" y="340" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" fill="#D6D5D499" text-anchor="middle">Build your app with AI</text>
+  <text x="750" y="320" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" fill="#D6D5D499" text-anchor="middle">Build your app with AI</text>
 
   <!-- URL -->
   <text x="750" y="440" font-family="monospace" font-size="16" fill="#D6D5D466" text-anchor="middle" letter-spacing="2">outpost.chat</text>
-
-  <!-- Accent line bottom -->
-  <rect x="0" y="498" width="1500" height="2" fill="#D6D5D4" opacity="0.12"/>
 </svg>

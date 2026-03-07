@@ -1,5 +1,5 @@
 <svg width="1128" height="191" viewBox="0 0 1128 191" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background: dark Umbra palette for LinkedIn banner -->
+  <!-- Background: dark Umbra palette -->
   <rect width="1128" height="191" fill="#000000"/>
 
   <!-- Subtle gradient -->
@@ -9,21 +9,21 @@
   </linearGradient>
   <rect width="1128" height="191" fill="url(#bgGrad)"/>
 
-  <!-- Top accent line -->
+  <!-- Accent lines -->
   <rect x="0" y="0" width="1128" height="1" fill="#D6D5D4" opacity="0.12"/>
+  <rect x="0" y="190" width="1128" height="1" fill="#D6D5D4" opacity="0.12"/>
 
-  <!-- Op logomark: circle -->
-  <circle cx="510" cy="78" r="24" fill="#D6D5D4"/>
+  <!-- Arch logomark -->
+  <g transform="translate(552, 30) scale(1.2)">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24V10C0 4.477 4.477 0 10 0s10 4.477 10 10v14H0ZM6 24V13c0-2.21 1.79-4 4-4s4 1.79 4 4v11H6Z" fill="#D6D5D4"/>
+  </g>
 
-  <!-- Op logomark: p letter -->
-  <text x="542" y="98" font-family="Georgia, serif" font-size="56" font-weight="400" fill="#D6D5D4">p</text>
+  <!-- Wordmark -->
+  <text x="564" y="110" font-family="Georgia, serif" font-size="32" font-weight="300" fill="#D6D5D4" text-anchor="middle" letter-spacing="-0.02em">Outpost</text>
 
   <!-- Tagline -->
-  <text x="564" y="140" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#D6D5D499" text-anchor="middle">Build your app with AI</text>
+  <text x="564" y="145" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" fill="#D6D5D499" text-anchor="middle">Build your app with AI</text>
 
   <!-- URL -->
-  <text x="564" y="170" font-family="monospace" font-size="11" fill="#D6D5D466" text-anchor="middle" letter-spacing="2">outpost.chat</text>
-
-  <!-- Bottom accent line -->
-  <rect x="0" y="190" width="1128" height="1" fill="#D6D5D4" opacity="0.12"/>
+  <text x="564" y="175" font-family="monospace" font-size="11" fill="#D6D5D466" text-anchor="middle" letter-spacing="2">outpost.chat</text>
 </svg>

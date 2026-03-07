@@ -9,7 +9,6 @@ export const metadata: Metadata = {
     title: "Outpost — Build your app with AI",
     description:
       "Log in, describe what you want, and we ship it. Wired to GitHub and Vercel.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
     siteName: "Outpost",
     type: "website",
   },
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
     title: "Outpost — Build your app with AI",
     description:
       "Log in, describe what you want, and we ship it. Wired to GitHub and Vercel.",
-    images: ["/og-image.png"],
   },
 };
 

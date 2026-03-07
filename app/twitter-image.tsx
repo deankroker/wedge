@@ -33,33 +33,39 @@ export default async function Image() {
           }}
         />
 
-        {/* Op logomark */}
+        {/* Arch logomark */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 8,
+            gap: 16,
             marginBottom: 32,
           }}
         >
-          <div
-            style={{
-              width: 96,
-              height: 96,
-              borderRadius: "50%",
-              backgroundColor: "#27251E",
-            }}
-          />
+          <svg
+            width="80"
+            height="80"
+            viewBox="0 0 20 24"
+            fill="none"
+          >
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M0 24V10C0 4.477 4.477 0 10 0s10 4.477 10 10v14H0ZM6 24V13c0-2.21 1.79-4 4-4s4 1.79 4 4v11H6Z"
+              fill="#27251E"
+            />
+          </svg>
           <span
             style={{
-              fontSize: 120,
+              fontSize: 64,
               color: "#27251E",
               fontFamily: "Georgia, serif",
               lineHeight: 1,
-              marginTop: -8,
+              fontWeight: 300,
+              letterSpacing: "-0.02em",
             }}
           >
-            p
+            Outpost
           </span>
         </div>
 
