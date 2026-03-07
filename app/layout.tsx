@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MemberPortalFAB from "@/components/MemberPortalFAB";
 
 export const metadata: Metadata = {
   title: "Outpost — Build your app with AI",
@@ -27,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <MemberPortalFAB />
+      </body>
     </html>
   );
 }

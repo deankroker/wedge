@@ -143,6 +143,17 @@ export default function Navbar() {
           >
             Get Started
           </Link>
+          <a
+            href="https://app.outpost.chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`text-xs font-medium text-center mt-2 ${
+              dark ? "text-[#8a8785]" : "text-[#8a7a66]"
+            }`}
+            onClick={() => setMenuOpen(false)}
+          >
+            Member Portal &rarr;
+          </a>
         </div>
       )}
     </nav>

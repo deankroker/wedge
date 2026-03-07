@@ -3,9 +3,250 @@
   "children": [
     {
       "type": "frame",
+      "id": "oDnjq",
+      "x": 3038,
+      "y": 8020,
+      "name": "Social Card - No Roadmap",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "BQAzx",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "type": "frame",
+          "id": "riqwD",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "juzu_me",
+            "link": "https://unsplash.com/@juzu_me",
+            "author": "Juan Ordonez"
+          },
+          "width": 1080,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1761019646793-c6f19e4a7f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "path",
+          "id": "tThAu",
+          "x": 940,
+          "y": 60,
+          "name": "sc4arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "huzX0",
+      "x": 4025,
+      "y": 5120,
+      "name": "overlay",
+      "width": 1080,
+      "height": 1080
+    },
+    {
+      "type": "frame",
+      "id": "34gQR",
+      "x": 3198,
+      "y": 4187,
+      "name": "Twitter Photo Light",
+      "clip": true,
+      "width": 1500,
+      "height": 500,
+      "fill": "#000000ff",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Al0hI",
+          "x": -34,
+          "y": -908,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "juzu_me",
+            "link": "https://unsplash.com/@juzu_me",
+            "author": "Juan Ordonez"
+          },
+          "width": 1567,
+          "height": 1567,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1761019646793-c6f19e4a7f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "BK49S",
+          "x": 976,
+          "y": 204,
+          "name": "Frame 4",
+          "layout": "vertical",
+          "gap": 32,
+          "children": [
+            {
+              "type": "frame",
+              "id": "VAdqM",
+              "name": "Frame 3",
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "2owEU",
+                  "name": "headline",
+                  "fill": "#ffffffff",
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#000000ff"
+                  },
+                  "content": "your next app doesn't\nneed a roadmap.",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 56,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "SjKsm",
+                  "name": "subtext",
+                  "fill": "#ffffffff",
+                  "content": "describe what you need. we build it.\nno sprints. no standups. this weekend.",
+                  "lineHeight": 1.5,
+                  "fontFamily": "Inter",
+                  "fontSize": 22,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "g5Luc",
+              "name": "Frame 5",
+              "gap": 8,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "eHQHR",
+                  "name": "archLight",
+                  "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+                  "fillRule": "evenodd",
+                  "fill": "#ffffffff",
+                  "width": 16,
+                  "height": 16
+                },
+                {
+                  "type": "text",
+                  "id": "EdKXu",
+                  "name": "url",
+                  "fill": "#ffffffff",
+                  "content": "outpost.chat",
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "2WuXx",
+      "x": 2498,
+      "y": 4754,
+      "name": "Social Card - No Roadmap",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "text",
+          "id": "jiXuU",
+          "x": 80,
+          "y": 200,
+          "name": "headline",
+          "fill": "#271A00",
+          "content": "your next app doesn't\nneed a roadmap.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "SpEF8",
+          "x": 80,
+          "y": 520,
+          "name": "subtext",
+          "fill": "#271A0099",
+          "content": "it needs a clear description\nand someone who ships.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "KFmAE",
+          "x": 940,
+          "y": 60,
+          "name": "sc4arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "HSg53",
+          "x": 80,
+          "y": 1000,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
       "id": "yo0lz",
       "x": 0,
-      "y": 0,
+      "y": -131,
       "name": "Icon Variants",
       "fill": "#FAF8F5",
       "gap": 24,
@@ -18,7 +259,6 @@
           "width": 80,
           "height": 80,
           "fill": "#000000",
-          "cornerRadius": 12,
           "layout": "none",
           "children": [
             {
@@ -221,7 +461,7 @@
       "type": "frame",
       "id": "idjvq",
       "x": 0,
-      "y": 220,
+      "y": 151,
       "name": "OG Banner (1200x630)",
       "width": 1200,
       "height": 630,
@@ -814,6 +1054,1355 @@
           "height": 6
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "IKthl",
+      "x": 1587,
+      "y": 880,
+      "name": "Twitter Banner (1500x500)",
+      "width": 1500,
+      "height": 500,
+      "fill": "#faf8f6ff",
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "hWs8F",
+          "x": 0,
+          "y": 0,
+          "name": "topLine",
+          "fill": "#FFFFFF33",
+          "width": 1500,
+          "height": 2
+        },
+        {
+          "type": "rectangle",
+          "id": "CPMzn",
+          "x": 0,
+          "y": 498,
+          "name": "btmLine",
+          "fill": "#FFFFFF33",
+          "width": 1500,
+          "height": 2
+        },
+        {
+          "type": "text",
+          "id": "X8dCU",
+          "x": 691,
+          "y": 428,
+          "name": "url",
+          "fill": "#00000066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 16,
+          "fontWeight": "normal",
+          "letterSpacing": 0.15
+        },
+        {
+          "type": "frame",
+          "id": "drTko",
+          "x": 605,
+          "y": 150,
+          "name": "Frame 1",
+          "layout": "vertical",
+          "gap": 32,
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "VIPaO",
+              "name": "Frame 2",
+              "layout": "vertical",
+              "gap": 8,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "6nQhF",
+                  "name": "arch",
+                  "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+                  "fillRule": "evenodd",
+                  "fill": "#271a00",
+                  "width": 48,
+                  "height": 58
+                },
+                {
+                  "type": "text",
+                  "id": "52hGT",
+                  "name": "wordmark",
+                  "fill": "#271a00",
+                  "content": "Outpost",
+                  "fontFamily": "Cormorant Garamond",
+                  "fontSize": 56,
+                  "fontWeight": "300",
+                  "letterSpacing": -0.02
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "rChF3",
+              "name": "tagline",
+              "fill": "#271a00",
+              "content": "Build your app with AI",
+              "fontFamily": "Inter",
+              "fontSize": 28,
+              "fontWeight": "normal"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "yGakd",
+      "x": 0,
+      "y": 4230,
+      "name": "Twitter Photo Dark",
+      "clip": true,
+      "width": 1500,
+      "height": 500,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "pwaS5",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "jakubzerdzicki",
+            "link": "https://unsplash.com/@jakubzerdzicki",
+            "author": "Jakub Żerdzicki"
+          },
+          "width": 1500,
+          "height": 500,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1729575559925-671e80a415b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjIzNTV8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "hvf4v",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1500,
+          "height": 500
+        },
+        {
+          "type": "path",
+          "id": "vLJ7z",
+          "x": 80,
+          "y": 170,
+          "name": "archDark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "type": "text",
+          "id": "wadz1",
+          "x": 80,
+          "y": 240,
+          "name": "wordmark",
+          "fill": "#D6D5D4",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "eIVwn",
+          "x": 80,
+          "y": 310,
+          "name": "tagline",
+          "fill": "#D6D5D499",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "VZXGF",
+          "x": 80,
+          "y": 440,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "line",
+          "id": "nHNB6",
+          "x": 0,
+          "y": 0,
+          "name": "line-top",
+          "width": 1500,
+          "height": 0,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF1A"
+          }
+        },
+        {
+          "type": "line",
+          "id": "iXqzL",
+          "x": 0,
+          "y": 499,
+          "name": "line-bottom",
+          "width": 1500,
+          "height": 0,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF1A"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "QNbBz",
+      "x": 1608,
+      "y": 4230,
+      "name": "Twitter Photo Light",
+      "clip": true,
+      "width": 1500,
+      "height": 500,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "XbjE6",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "getrodeo",
+            "link": "https://unsplash.com/@getrodeo",
+            "author": "Rodeo Project Management Software"
+          },
+          "width": 1500,
+          "height": 500,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1680781336852-af0416157119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjIzNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "iceUR",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1500,
+          "height": 500
+        },
+        {
+          "type": "path",
+          "id": "0UE8G",
+          "x": 80,
+          "y": 170,
+          "name": "archLight",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 40,
+          "height": 40
+        },
+        {
+          "type": "text",
+          "id": "WZMta",
+          "x": 80,
+          "y": 240,
+          "name": "wordmark",
+          "fill": "#271A00",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "sWFE9",
+          "x": 80,
+          "y": 310,
+          "name": "tagline",
+          "fill": "#271A0099",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 24,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "W5oA1",
+          "x": 80,
+          "y": 440,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "line",
+          "id": "hHHKL",
+          "x": 0,
+          "y": 0,
+          "name": "line-top",
+          "width": 1500,
+          "height": 0,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          }
+        },
+        {
+          "type": "line",
+          "id": "L1Mnm",
+          "x": 0,
+          "y": 499,
+          "name": "line-bottom",
+          "width": 1500,
+          "height": 0,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#271A001A"
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "SJr2M",
+      "x": 0,
+      "y": 4830,
+      "name": "LinkedIn Photo Dark",
+      "clip": true,
+      "width": 1128,
+      "height": 191,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "YgSYN",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "mahdibafande",
+            "link": "https://unsplash.com/@mahdibafande",
+            "author": "Mahdi Bafande"
+          },
+          "width": 1128,
+          "height": 191,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1665418328674-9c76926907b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjIzODh8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nZP0O",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1128,
+          "height": 191
+        },
+        {
+          "type": "path",
+          "id": "3CxWa",
+          "x": 60,
+          "y": 50,
+          "name": "liArchDark",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 28,
+          "height": 28
+        },
+        {
+          "type": "text",
+          "id": "nneoo",
+          "x": 60,
+          "y": 90,
+          "name": "wordmark",
+          "fill": "#D6D5D4",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 32,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "MADbt",
+          "x": 60,
+          "y": 135,
+          "name": "tagline",
+          "fill": "#D6D5D499",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "1OlaS",
+          "x": 60,
+          "y": 165,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "Agb7U",
+      "x": 1230,
+      "y": 4830,
+      "name": "LinkedIn Photo Light",
+      "clip": true,
+      "width": 1128,
+      "height": 191,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "NGQi2",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "nobleseed",
+            "link": "https://unsplash.com/@nobleseed",
+            "author": "nobleseed nobleseed"
+          },
+          "width": 1128,
+          "height": 191,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1765691893454-21622cc8a63f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjIzODh8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "SZYxC",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1128,
+          "height": 191
+        },
+        {
+          "type": "path",
+          "id": "mfXNS",
+          "x": 60,
+          "y": 50,
+          "name": "liArchLight",
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 28,
+          "height": 28
+        },
+        {
+          "type": "text",
+          "id": "f0B11",
+          "x": 60,
+          "y": 90,
+          "name": "wordmark",
+          "fill": "#271A00",
+          "content": "Outpost",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 32,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "ayH7a",
+          "x": 60,
+          "y": 135,
+          "name": "tagline",
+          "fill": "#271A0099",
+          "content": "Build your app with AI",
+          "fontFamily": "Inter",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "text",
+          "id": "HIU6r",
+          "x": 60,
+          "y": 165,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 11,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "p3F5C",
+      "x": 0,
+      "y": 5120,
+      "name": "Social Card - Ship Fast",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "rOJnC",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "nathan_cef",
+            "link": "https://unsplash.com/@nathan_cef",
+            "author": "Nathan Franklin"
+          },
+          "width": 1080,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1676486926437-585cca94bc1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0MDV8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "4MXJj",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "type": "text",
+          "id": "V3TtN",
+          "x": 80,
+          "y": 200,
+          "name": "headline",
+          "fill": "#D6D5D4",
+          "content": "your app.\nshipped this weekend.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "nFLB0",
+          "x": 80,
+          "y": 520,
+          "name": "subtext",
+          "fill": "#D6D5D499",
+          "content": "describe what you need. we build it.\nno sprints. no standups. just software.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "SFobN",
+          "x": 940,
+          "y": 60,
+          "name": "sc1arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "etYO7",
+          "x": 80,
+          "y": 1000,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "0YPdr",
+      "x": 1180,
+      "y": 5120,
+      "name": "Wide Card - Ship Fast",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "sfDPX",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "zoshuacolah",
+            "link": "https://unsplash.com/@zoshuacolah",
+            "author": "Zoshua Colah"
+          },
+          "width": 1200,
+          "height": 630,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1751199199822-c61b8bb7101b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0MDV8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "2vcCJ",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "type": "text",
+          "id": "bZBG9",
+          "x": 80,
+          "y": 100,
+          "name": "headline",
+          "fill": "#D6D5D4",
+          "content": "your app.\nshipped this weekend.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 44,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "R4arq",
+          "x": 80,
+          "y": 300,
+          "name": "subtext",
+          "fill": "#D6D5D499",
+          "content": "describe what you need. we build it.\nno sprints. no standups. just software.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "5REd4",
+          "x": 1060,
+          "y": 40,
+          "name": "wc1arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "2aJXb",
+          "x": 80,
+          "y": 570,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "5uyMO",
+      "x": 0,
+      "y": 6300,
+      "name": "Social Card - AI-Powered",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "igfY2",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "timschmidbauer",
+            "link": "https://unsplash.com/@timschmidbauer",
+            "author": "Tim Schmidbauer"
+          },
+          "width": 1080,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1770816307528-67e404552dcf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0MjR8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nBHMO",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "type": "text",
+          "id": "1Pmj8",
+          "x": 80,
+          "y": 200,
+          "name": "headline",
+          "fill": "#271A00",
+          "content": "AI doesn't replace\nthe builder. it is one.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "yOSaX",
+          "x": 80,
+          "y": 520,
+          "name": "subtext",
+          "fill": "#271A0099",
+          "content": "from database to deploy — your app\ngets the same care a senior engineer gives.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "YXvnW",
+          "x": 940,
+          "y": 60,
+          "name": "sc2arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "78rwy",
+          "x": 80,
+          "y": 1000,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "AxvpQ",
+      "x": 1180,
+      "y": 6300,
+      "name": "Wide Card - AI-Powered",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "54DJe",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "zoshuacolah",
+            "link": "https://unsplash.com/@zoshuacolah",
+            "author": "Zoshua Colah"
+          },
+          "width": 1200,
+          "height": 630,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1751200065687-a126e7c304da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0MjR8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "haCzN",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "type": "text",
+          "id": "MzKDo",
+          "x": 80,
+          "y": 100,
+          "name": "headline",
+          "fill": "#271A00",
+          "content": "AI doesn't replace\nthe builder. it is one.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 44,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "0b2fU",
+          "x": 80,
+          "y": 300,
+          "name": "subtext",
+          "fill": "#271A0099",
+          "content": "from database to deploy — your app\ngets the same care a senior engineer gives.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "m5PxN",
+          "x": 1060,
+          "y": 40,
+          "name": "wc2arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "1Mvce",
+          "x": 80,
+          "y": 570,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "zvAmd",
+      "x": 0,
+      "y": 7480,
+      "name": "Social Card - 40+ Apps",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "UPZxX",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "harm_van_de_ven",
+            "link": "https://unsplash.com/@harm_van_de_ven",
+            "author": "Harm van de Ven"
+          },
+          "width": 1080,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1628445419644-13f0a9f0a9c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NDF8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "SVpFk",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "type": "text",
+          "id": "PWLFs",
+          "x": 80,
+          "y": 200,
+          "name": "headline",
+          "fill": "#D6D5D4",
+          "content": "40+ apps.\n90 days.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "mJQ7n",
+          "x": 80,
+          "y": 520,
+          "name": "subtext",
+          "fill": "#D6D5D499",
+          "content": "dashboards. automations. AI tools.\nfull-stack webapps — idea to production.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "LYZJW",
+          "x": 940,
+          "y": 60,
+          "name": "sc3arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "IbH5H",
+          "x": 80,
+          "y": 1000,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "AsE6S",
+      "x": 1180,
+      "y": 7480,
+      "name": "Wide Card - 40+ Apps",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": "#000000",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "UQmrC",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "ryangeller",
+            "link": "https://unsplash.com/@ryangeller",
+            "author": "Ryan Geller"
+          },
+          "width": 1200,
+          "height": 630,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1618272016508-82619dd702d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NDF8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Tf1e2",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "type": "text",
+          "id": "MBAws",
+          "x": 80,
+          "y": 100,
+          "name": "headline",
+          "fill": "#D6D5D4",
+          "content": "40+ apps.\n90 days.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 44,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "42tR4",
+          "x": 80,
+          "y": 300,
+          "name": "subtext",
+          "fill": "#D6D5D499",
+          "content": "dashboards. automations. AI tools.\nfull-stack webapps — idea to production.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "dymKk",
+          "x": 1060,
+          "y": 40,
+          "name": "wc3arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#D6D5D4",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "9ZuMV",
+          "x": 80,
+          "y": 570,
+          "name": "url",
+          "fill": "#D6D5D466",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "dAHvp",
+      "x": 0,
+      "y": 8660,
+      "name": "Social Card - No Roadmap",
+      "clip": true,
+      "width": 1080,
+      "height": 1080,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "GEZpC",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "juzu_me",
+            "link": "https://unsplash.com/@juzu_me",
+            "author": "Juan Ordonez"
+          },
+          "width": 1080,
+          "height": 1080,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1761019646793-c6f19e4a7f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "l03Ja",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        },
+        {
+          "type": "text",
+          "id": "mLvxu",
+          "x": 80,
+          "y": 200,
+          "name": "headline",
+          "fill": "#271A00",
+          "content": "your next app doesn't\nneed a roadmap.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 56,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "U5jUl",
+          "x": 80,
+          "y": 520,
+          "name": "subtext",
+          "fill": "#271A0099",
+          "content": "it needs a clear description\nand someone who ships.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 22,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "oWdov",
+          "x": 940,
+          "y": 60,
+          "name": "sc4arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "fWH4v",
+          "x": 80,
+          "y": 1000,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "frame",
+          "id": "KyiXB",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1080,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "2kRp2",
+      "x": 1180,
+      "y": 8660,
+      "name": "Wide Card - No Roadmap",
+      "clip": true,
+      "width": 1200,
+      "height": 630,
+      "fill": "#FAF8F5",
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "C3iRr",
+          "x": 0,
+          "y": 0,
+          "name": "photo-bg",
+          "metadata": {
+            "type": "unsplash",
+            "username": "fotografiaeditorial",
+            "link": "https://unsplash.com/@fotografiaeditorial",
+            "author": "FOTOGRAFÍA EDITORIAL"
+          },
+          "width": 1200,
+          "height": 630,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "https://images.unsplash.com/photo-1765648580621-e36fb1fbf452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjI0NTd8&ixlib=rb-4.1.0&q=80&w=1080",
+            "mode": "fill"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "ooXF0",
+          "x": 0,
+          "y": 0,
+          "name": "overlay",
+          "width": 1200,
+          "height": 630
+        },
+        {
+          "type": "text",
+          "id": "LHjoW",
+          "x": 80,
+          "y": 100,
+          "name": "headline",
+          "fill": "#271A00",
+          "content": "your next app doesn't\nneed a roadmap.",
+          "fontFamily": "Cormorant Garamond",
+          "fontSize": 44,
+          "fontWeight": "300"
+        },
+        {
+          "type": "text",
+          "id": "b2meL",
+          "x": 80,
+          "y": 300,
+          "name": "subtext",
+          "fill": "#271A0099",
+          "content": "it needs a clear description\nand someone who ships.",
+          "lineHeight": 1.5,
+          "fontFamily": "Inter",
+          "fontSize": 18,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "path",
+          "id": "6TQk9",
+          "x": 1060,
+          "y": 40,
+          "name": "wc4arch",
+          "opacity": 0.15,
+          "geometry": "M0 24v-14c0-5.523 4.477-10 10-10s10 4.477 10 10v14h-20z m6 0v-11c0-2.21 1.79-4 4-4s4 1.79 4 4v11h-8z",
+          "fillRule": "evenodd",
+          "fill": "#271A00",
+          "width": 60,
+          "height": 60
+        },
+        {
+          "type": "text",
+          "id": "gETaW",
+          "x": 80,
+          "y": 570,
+          "name": "url",
+          "fill": "#271A0066",
+          "content": "outpost.chat",
+          "fontFamily": "JetBrains Mono",
+          "fontSize": 14,
+          "fontWeight": "normal"
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "O3JTM",
+      "x": 3275,
+      "y": 3558,
+      "name": "overlay",
+      "width": 1500,
+      "height": 500
+    },
+    {
+      "type": "frame",
+      "id": "ugh7S",
+      "x": 4905,
+      "y": 3669,
+      "name": "photo-bg",
+      "metadata": {
+        "type": "unsplash",
+        "username": "getrodeo",
+        "link": "https://unsplash.com/@getrodeo",
+        "author": "Rodeo Project Management Software"
+      },
+      "width": 1500,
+      "height": 500,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "https://images.unsplash.com/photo-1680781336852-af0416157119?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzI5MjIzNTZ8&ixlib=rb-4.1.0&q=80&w=1080",
+        "mode": "fill"
+      }
+    },
+    {
+      "type": "text",
+      "id": "vq5y0",
+      "x": 4727,
+      "y": 4349,
+      "name": "headline",
+      "fill": "#ffffffff",
+      "content": "your next app doesn't\nneed a roadmap.",
+      "fontFamily": "Cormorant Garamond",
+      "fontSize": 56,
+      "fontWeight": "300"
+    },
+    {
+      "type": "text",
+      "id": "Mlfqf",
+      "x": 4727,
+      "y": 4517,
+      "name": "subtext",
+      "fill": "#ffffffff",
+      "content": "it needs a clear description\nand someone who ships.",
+      "lineHeight": 1.5,
+      "fontFamily": "Inter",
+      "fontSize": 22,
+      "fontWeight": "normal"
+    },
+    {
+      "type": "text",
+      "id": "cIUUT",
+      "x": 4727,
+      "y": 4712,
+      "name": "url",
+      "fill": "#ffffffff",
+      "content": "outpost.chat",
+      "fontFamily": "JetBrains Mono",
+      "fontSize": 14,
+      "fontWeight": "normal"
     }
   ],
   "variables": {
