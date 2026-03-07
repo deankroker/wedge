@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 
 const rotatingWords = [
   "Ships", "Builds", "Automates", "Transforms",
@@ -49,12 +50,8 @@ const projectCards = [
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
-  // Which set of 3 cards we're showing (0 = cards 0,1,2 | 1 = cards 3,4,5 | etc.)
   const [setIndex, setSetIndex] = useState(0);
-  // Which card within the current set is "lit" (0, 1, or 2)
   const [activeSlot, setActiveSlot] = useState(0);
-  const [soundOff, setSoundOff] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Word rotator
   useEffect(() => {
@@ -65,13 +62,10 @@ export default function Hero() {
   }, []);
 
   // Card highlight + set cycling
-  // Each card gets highlighted for 2s, then move to next.
-  // After card 3 (slot 2), swap all 3 cards to next set.
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlot((prev) => {
         if (prev >= 2) {
-          // Move to next set of 3
           setSetIndex((s) => {
             const totalSets = Math.ceil(projectCards.length / 3);
             return (s + 1) % totalSets;
@@ -84,7 +78,6 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  // Get the 3 cards for the current set
   const getCard = (slot: number) => {
     const idx = (setIndex * 3 + slot) % projectCards.length;
     return projectCards[idx];
@@ -98,48 +91,6 @@ export default function Hero() {
         background: "var(--astra-200)",
       }}
     >
-      {/* Video background — large rect with radial gradient fade (Perplexity style) */}
-      <div
-        className="absolute"
-        style={{
-          zIndex: 1,
-          width: "1610px",
-          height: "906px",
-          top: "-83px",
-          left: "50%",
-          transform: "translate(calc(-50% - 160px))",
-        }}
-      >
-        <video
-          ref={videoRef}
-          autoPlay
-          muted={soundOff}
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ zIndex: 1 }}
-        >
-          <source
-            src="https://pplx-res.cloudinary.com/video/upload/v1771728928/pplx-web/Computer/videos/computer-hero-bg-2.webm"
-            type="video/webm"
-          />
-        </video>
-        {/* Radial gradient fade */}
-        <div
-          className="absolute inset-0"
-          style={{
-            zIndex: 2,
-            pointerEvents: "none",
-            background: `
-              radial-gradient(804px 120% at calc(50% - 160px) 40%, #faf8f500 72%, #faf8f5 100%),
-              linear-gradient(90deg, #faf8f5 0%, #faf8f500 12%),
-              linear-gradient(270deg, #faf8f500 80%, #faf8f5 100%),
-              linear-gradient(#faf8f5 0%, #faf8f500 16% 64%, #faf8f5eb 92%, #faf8f5 100%)
-            `,
-          }}
-        />
-      </div>
-
       {/* ===== DESKTOP LAYOUT ===== */}
 
       {/* Right side: headlines — hidden on mobile */}
@@ -167,7 +118,7 @@ export default function Hero() {
             width: "100%",
           }}
         >
-          Wedge
+          Outpost
         </h1>
 
         {/* Word rotator */}
@@ -213,19 +164,19 @@ export default function Hero() {
 
         {/* CTA button */}
         <div className="mt-8" style={{ pointerEvents: "auto" }}>
-          <a
-            href="/contact"
+          <Link
+            href="/pricing"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
             style={{
               background: "var(--astra-2000)",
               color: "var(--astra-200)",
             }}
           >
-            Start a Conversation
+            Get Started
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -258,22 +209,9 @@ export default function Hero() {
                 position: "relative",
                 transition: "border-color 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease",
                 opacity: isActive ? 1 : 0.65,
+                background: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.5)",
               }}
             >
-              {/* Glass background */}
-              <div
-                style={{
-                  position: "absolute",
-                  inset: 0,
-                  background: isActive ? "rgba(255,255,255,0.85)" : "rgba(255,255,255,0.6)",
-                  backdropFilter: "blur(20px)",
-                  WebkitBackdropFilter: "blur(20px)",
-                  borderRadius: "8px",
-                  zIndex: 0,
-                  pointerEvents: "none",
-                  transition: "background 0.4s ease",
-                }}
-              />
               {/* Content — fades in-place when card set changes */}
               <AnimatePresence mode="wait">
                 <motion.div
@@ -354,7 +292,7 @@ export default function Hero() {
             textAlign: "center",
           }}
         >
-          Wedge
+          Outpost
         </h1>
 
         {/* Word rotator — mobile */}
@@ -405,24 +343,24 @@ export default function Hero() {
             maxWidth: "20rem",
           }}
         >
-          AI consulting that builds real tools for traditional businesses.
+          Build your app with AI. Describe what you want — we ship it.
         </p>
 
         {/* CTA button — mobile */}
         <div className="mt-8">
-          <a
-            href="/contact"
+          <Link
+            href="/pricing"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
             style={{
               background: "var(--astra-2000)",
               color: "var(--astra-200)",
             }}
           >
-            Start a Conversation
+            Get Started
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
 
@@ -431,34 +369,8 @@ export default function Hero() {
         className="absolute bottom-6 left-6 flex items-center gap-3"
         style={{ color: "var(--astra-2000-60)", zIndex: 2 }}
       >
-        <span className="text-xs font-mono tracking-widest">AI CONSULTING</span>
-        <span className="text-xs font-mono" style={{ letterSpacing: "2px" }}>
-          BY WESTERN HEMLOCK
-        </span>
+        <span className="text-xs font-mono tracking-widest">AI APP BUILDER</span>
       </div>
-
-      {/* Bottom right: SOUND toggle */}
-      <button
-        className="absolute bottom-6 right-6 hidden md:flex items-center gap-2 text-xs font-mono tracking-widest transition-opacity hover:opacity-70"
-        style={{ color: "var(--astra-2000-60)", zIndex: 2 }}
-        onClick={() => {
-          setSoundOff(!soundOff);
-          if (videoRef.current) videoRef.current.muted = !soundOff;
-        }}
-      >
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path d="M1 4h3l4-3v10L4 8H1V4z" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-          {soundOff ? (
-            <path d="M13 1L9 5m4 5L9 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-          ) : (
-            <>
-              <path d="M10 2c1.5 1 2.5 2.5 2.5 4s-1 3-2.5 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-              <path d="M12 0c2 1.5 3 3.5 3 6s-1 4.5-3 6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-            </>
-          )}
-        </svg>
-        {soundOff ? "SOUND OFF" : "SOUND ON"}
-      </button>
     </section>
   );
 }

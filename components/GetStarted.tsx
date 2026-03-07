@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function GetStarted() {
   return (
@@ -48,9 +49,9 @@ export default function GetStarted() {
               lineHeight: 1.05,
             }}
           >
-            Ready to find
+            Ready to start
             <br />
-            your leverage?
+            building?
           </h2>
           <p
             className="text-lg md:text-xl mb-12 leading-relaxed mx-auto"
@@ -59,15 +60,15 @@ export default function GetStarted() {
               maxWidth: "36rem",
             }}
           >
-            Most engagements start with a conversation. Tell us what you&apos;re building
-            and we&apos;ll show you where AI fits.
+            Pick a plan, log in, and describe what you want. We&apos;ll ship it — wired
+            to GitHub and Vercel.
           </p>
 
           {/* 3-tier CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {/* Tier 1: Email */}
-            <a
-              href="mailto:dean@westernhemlock.com"
+            {/* Tier 1: Pick a Plan */}
+            <Link
+              href="/pricing"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80"
               style={{
                 background: "var(--dark-btn-bg)",
@@ -75,7 +76,7 @@ export default function GetStarted() {
                 letterSpacing: "0.01em",
               }}
             >
-              Email Us
+              Pick a Plan
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="ml-1">
                 <path
                   d="M3.5 8h9M9 4.5l3.5 3.5-3.5 3.5"
@@ -85,7 +86,7 @@ export default function GetStarted() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </a>
+            </Link>
 
             {/* Tier 2: Book a call */}
             <a
@@ -100,14 +101,12 @@ export default function GetStarted() {
                 letterSpacing: "0.01em",
               }}
             >
-              Book a 10-min Call
+              Book a Free 10-Min Call
             </a>
 
-            {/* Tier 3: Buy */}
-            <a
-              href="https://buy.stripe.com/placeholder-5hr"
-              target="_blank"
-              rel="noopener noreferrer"
+            {/* Tier 3: Starter engagement */}
+            <Link
+              href="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80 border"
               style={{
                 background: "transparent",
@@ -116,8 +115,8 @@ export default function GetStarted() {
                 letterSpacing: "0.01em",
               }}
             >
-              Buy 5hrs — $3K
-            </a>
+              Starter Engagement
+            </Link>
           </div>
         </motion.div>
       </div>

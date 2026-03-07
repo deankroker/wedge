@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
-  { label: "Stack", href: "/stack" },
   { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/services" },
+  { label: "Team", href: "/team" },
   { label: "About", href: "/about" },
 ];
 
@@ -62,16 +62,8 @@ export default function Navbar() {
             className={`text-2xl font-light tracking-tight ${textColor}`}
             style={{ fontFamily: "var(--nimbus-font-serif)" }}
           >
-            Wedge
+            Outpost
           </span>
-          {/* Wedge triangle mark */}
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
-            <polygon
-              points="10,2 18,18 2,18"
-              fill={dark ? "#d6d5d4" : "#271a00"}
-              opacity="0.8"
-            />
-          </svg>
         </Link>
 
         {/* Desktop nav */}
@@ -86,7 +78,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/pricing"
             className={`ml-2 px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
               dark
                 ? "bg-[#d6d5d4] text-[#171615] hover:bg-[#d6d5d4cc]"
@@ -139,7 +131,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/pricing"
             className={`inline-block px-4 py-2 rounded-full text-sm font-semibold text-center ${
               dark
                 ? "bg-[#d6d5d4] text-[#171615]"

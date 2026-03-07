@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SubpageNavbar from "@/components/SubpageNavbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function ContactPage() {
   return (
@@ -47,7 +48,7 @@ export default function ContactPage() {
           className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8"
           style={{ maxWidth: "72rem" }}
         >
-          {/* Option 1: Email */}
+          {/* Option 1: Get Started */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +64,7 @@ export default function ContactPage() {
               className="text-xs font-mono tracking-widest uppercase block mb-4"
               style={{ color: "var(--astra-2000-40)" }}
             >
-              01 — WRITE
+              01 — START
             </span>
             <h3
               className="mb-4"
@@ -74,27 +75,27 @@ export default function ContactPage() {
                 fontWeight: 400,
               }}
             >
-              Email us
+              Pick a plan
             </h3>
             <p
               className="text-sm leading-relaxed mb-6"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              Tell us about your business and what you&apos;re trying to solve. We read every email and respond within 24 hours. No forms. No chatbots. Just humans.
+              The fastest way to get started. Pick a plan, log in, and start building your app immediately.
             </p>
-            <a
-              href="mailto:dean@westernhemlock.com"
+            <Link
+              href="/pricing"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
               style={{
                 background: "var(--astra-2000)",
                 color: "var(--astra-200)",
               }}
             >
-              dean@westernhemlock.com
+              View Plans
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
-            </a>
+            </Link>
           </motion.div>
 
           {/* Option 2: Call */}
@@ -124,13 +125,13 @@ export default function ContactPage() {
                 fontWeight: 400,
               }}
             >
-              Book a 10-min call
+              Book a free 10-min call
             </h3>
             <p
               className="text-sm leading-relaxed mb-6"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              10 minutes. No pitch deck. We listen to what you&apos;re dealing with and tell you honestly if we can help. If we can&apos;t, we&apos;ll point you to someone who can.
+              10 minutes. No pitch deck. We listen to what you&apos;re building and tell you honestly if Outpost is the right fit.
             </p>
             <a
               href="https://calendly.com/placeholder"
@@ -149,7 +150,7 @@ export default function ContactPage() {
             </a>
           </motion.div>
 
-          {/* Option 3: Buy */}
+          {/* Option 3: Buy hours */}
           <motion.div
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -176,13 +177,13 @@ export default function ContactPage() {
                 fontWeight: 400,
               }}
             >
-              Buy a starter engagement
+              Starter engagement
             </h3>
             <p
               className="text-sm leading-relaxed mb-6"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              Know what you need? Skip the call. Buy hours, send us a brief, and we&apos;ll start building within 48 hours. No contracts. No procurement process.
+              Hour packs for consulting without the app. Skip the subscription — buy hours and we start building.
             </p>
             <div className="flex flex-col gap-3">
               <a
@@ -229,7 +230,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Calendly embed placeholder */}
+      {/* Bottom note */}
       <section className="px-6 pb-20">
         <div
           className="mx-auto rounded-xl p-12 text-center"
@@ -240,22 +241,16 @@ export default function ContactPage() {
           }}
         >
           <p
-            className="text-sm font-mono"
-            style={{ color: "var(--astra-2000-40)" }}
-          >
-            [ Calendly embed will appear here ]
-          </p>
-          <p
-            className="mt-4 text-base"
+            className="text-base"
             style={{ color: "var(--astra-2000-60)" }}
           >
             Or email us directly at{" "}
             <a
-              href="mailto:dean@westernhemlock.com"
+              href="mailto:hi@outpost.chat"
               className="underline"
               style={{ color: "var(--astra-2000)" }}
             >
-              dean@westernhemlock.com
+              hi@outpost.chat
             </a>
           </p>
         </div>

@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Services", href: "/services" },
-  { label: "Stack", href: "/stack" },
   { label: "Pricing", href: "/pricing" },
+  { label: "How It Works", href: "/services" },
+  { label: "Team", href: "/team" },
   { label: "About", href: "/about" },
 ];
 
@@ -39,11 +39,8 @@ export default function SubpageNavbar() {
             className="text-2xl font-light tracking-tight text-[#271a00]"
             style={{ fontFamily: "var(--nimbus-font-serif)" }}
           >
-            Wedge
+            Outpost
           </span>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="ml-1">
-            <polygon points="10,2 18,18 2,18" fill="#271a00" opacity="0.8" />
-          </svg>
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
@@ -57,7 +54,7 @@ export default function SubpageNavbar() {
             </Link>
           ))}
           <Link
-            href="/contact"
+            href="/pricing"
             className="ml-2 px-4 py-2 rounded-full text-sm font-semibold transition-colors bg-[#271a00] text-[#faf8f5] hover:bg-[#271a00cc]"
           >
             Get Started

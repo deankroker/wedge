@@ -118,7 +118,7 @@ export default function Features() {
             className="text-xs font-mono tracking-[0.3em] uppercase mb-6"
             style={{ color: "var(--astra-2000-60)" }}
           >
-            SERVICES
+            CAPABILITIES
           </p>
           <h2
             style={{
@@ -129,9 +129,9 @@ export default function Features() {
               fontWeight: 400,
             }}
           >
-            What Wedge
+            What you can build
             <br />
-            builds for you
+            with Outpost
           </h2>
         </div>
 

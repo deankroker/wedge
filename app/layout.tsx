@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Wedge — AI consulting for businesses that build real things",
+  title: "Outpost — Build your app with AI",
   description:
-    "Wedge by Western Hemlock. We don't make slides about AI. We build the tools that change how your business operates.",
+    "Outpost is an AI app builder. Log in, describe what you want, and we ship it — wired to GitHub and Vercel.",
 };
 
 export default function RootLayout({

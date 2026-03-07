@@ -7,8 +7,8 @@ const paragraphs = [
     id: "p1",
     content: (
       <>
-        <WedgeIcon /> <strong>Your business wasn&apos;t built for AI.</strong> That&apos;s exactly
-        why it needs it.
+        <OutpostIcon /> <strong>You have an idea for an app.</strong> Outpost turns it
+        into reality.
       </>
     ),
   },
@@ -16,9 +16,9 @@ const paragraphs = [
     id: "p2",
     content: (
       <>
-        Wedge doesn&apos;t make decks about &ldquo;digital transformation.&rdquo; We build the actual
-        tools — custom AI systems that slot into your existing workflows and make
-        everything run faster.
+        Outpost doesn&apos;t make decks about &ldquo;digital transformation.&rdquo; You describe
+        what you want in plain English, and we build it — a real webapp, wired to
+        GitHub and Vercel, ready to ship.
       </>
     ),
   },
@@ -26,14 +26,14 @@ const paragraphs = [
     id: "p3",
     content: (
       <>
-        Most consultants sell you a roadmap.{" "}
-        <strong style={{ fontStyle: "italic" }}>We ship the product.</strong>
+        You build with Outpost.{" "}
+        <strong style={{ fontStyle: "italic" }}>We handle the infrastructure.</strong>
       </>
     ),
   },
 ];
 
-function WedgeIcon() {
+function OutpostIcon() {
   return (
     <span className="inline-block align-middle mr-2" style={{ lineHeight: 1 }}>
       <svg
@@ -44,18 +44,28 @@ function WedgeIcon() {
         xmlns="http://www.w3.org/2000/svg"
         style={{ display: "inline-block", verticalAlign: "middle" }}
       >
-        <polygon
-          points="22,4 40,38 4,38"
+        <circle
+          cx="22"
+          cy="22"
+          r="18"
           fill="none"
           stroke="var(--astra-2000)"
           strokeWidth="2.5"
         />
-        <polygon
-          points="22,14 32,34 12,34"
+        <circle
+          cx="22"
+          cy="22"
+          r="10"
           fill="var(--astra-2000)"
           opacity="0.15"
         />
-        <line x1="22" y1="4" x2="22" y2="38" stroke="var(--astra-2000)" strokeWidth="1" opacity="0.3" />
+        <circle
+          cx="22"
+          cy="22"
+          r="4"
+          fill="var(--astra-2000)"
+          opacity="0.4"
+        />
       </svg>
     </span>
   );

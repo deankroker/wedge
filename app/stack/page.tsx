@@ -196,7 +196,7 @@ export default function StackPage() {
             &ldquo;We don&apos;t demo tools. We demo what tools make possible.&rdquo;
           </p>
           <a
-            href="mailto:dean@westernhemlock.com?subject=Show%20me%20the%20art%20of%20the%20possible"
+            href="mailto:hi@outpost.chat?subject=Show%20me%20the%20art%20of%20the%20possible"
             className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
             style={{
               background: "var(--astra-2000)",

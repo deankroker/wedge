@@ -4,29 +4,26 @@ import Link from "next/link";
 
 const columns = [
   {
+    title: "Product",
+    links: [
+      { label: "Pricing", href: "/pricing" },
+      { label: "How It Works", href: "/services" },
+      { label: "Get Started", href: "/pricing" },
+    ],
+  },
+  {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
+      { label: "Team", href: "/team" },
       { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
       { label: "Privacy Policy", href: "#" },
       { label: "Terms", href: "#" },
-    ],
-  },
-  {
-    title: "Services",
-    links: [
-      { label: "Advisory", href: "/services" },
-      { label: "Build", href: "/services" },
-      { label: "Accelerate", href: "/services" },
-      { label: "Pricing", href: "/pricing" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Our Stack", href: "/stack" },
-      { label: "How It Works", href: "/#how-it-works" },
-      { label: "Get Started", href: "/contact" },
     ],
   },
   {
@@ -66,30 +63,21 @@ export default function Footer() {
                   color: "var(--umbra-1000)",
                 }}
               >
-                Wedge
+                Outpost
               </span>
-              <svg width="16" height="16" viewBox="0 0 20 20" fill="none" className="ml-1">
-                <polygon
-                  points="10,2 18,18 2,18"
-                  fill="#d6d5d4"
-                  opacity="0.8"
-                />
-              </svg>
             </Link>
             <p
               className="text-sm leading-relaxed mb-4"
               style={{ color: "var(--dark-text-muted)", maxWidth: "16rem" }}
             >
-              AI consulting for businesses that build real things.
-              <br />
-              By Western Hemlock.
+              Build your app with AI.
             </p>
             <a
-              href="mailto:dean@westernhemlock.com"
+              href="mailto:hi@outpost.chat"
               className="text-sm transition-opacity hover:opacity-70"
               style={{ color: "var(--umbra-1000)" }}
             >
-              dean@westernhemlock.com
+              hi@outpost.chat
             </a>
           </div>
 
@@ -125,7 +113,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--astra-0-12)" }}
         >
           <p className="text-xs" style={{ color: "var(--dark-text-muted)" }}>
-            © 2026 Western Hemlock LLC
+            © 2026 A collaboration between Spark Labs LLC and Western Hemlock LLC
           </p>
           <div className="flex items-center gap-6">
             <Link

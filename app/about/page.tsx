@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SubpageNavbar from "@/components/SubpageNavbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -33,7 +34,7 @@ export default function AboutPage() {
                 lineHeight: 1.05,
               }}
             >
-              Western Hemlock.
+              About Outpost.
             </h1>
           </motion.div>
         </div>
@@ -76,42 +77,35 @@ export default function AboutPage() {
                 color: "var(--astra-2000)",
               }}
             >
-              The western hemlock is the most shade-tolerant tree in the Pacific Northwest. It doesn&apos;t need perfect conditions. It finds the gap, takes root, and grows — slowly, deliberately, until it dominates the canopy.
+              Outpost is an AI app builder created by a creative collective. You describe what you want — we ship it.
             </p>
 
             <p
               className="text-base leading-relaxed"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              That&apos;s the philosophy behind everything we do.
+              We built Outpost because we saw the same problem everywhere: people with great ideas for apps but no way to build them without hiring a dev team, managing sprints, or learning to code. That felt wrong.
             </p>
 
             <p
               className="text-base leading-relaxed"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              Western Hemlock is a consulting practice built for this moment — the narrow window where AI tools are powerful enough to transform any business, but most businesses haven&apos;t figured out how yet. We live in that gap.
+              So we built a platform where you log in, describe what you want in plain English, and we ship a real webapp — wired to GitHub and Vercel, deployed on your custom domain, backed by a real database. No mockups. No waiting. Just working software.
             </p>
 
             <p
               className="text-base leading-relaxed"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              We&apos;re not a big agency. We&apos;re not trying to be. We&apos;re a small, opinionated team that builds things — fast. We use agentic AI tools to ship software at a pace that doesn&apos;t make sense to traditional development teams. What used to require a team of ten and a quarter of roadmap, we do in a week with two people and a stack of AI-native tools.
+              Behind Outpost is a creative collective — a team of designers, developers, and AI specialists who keep the platform sharp and step in when you need hands-on help. We&apos;re not a faceless SaaS company. We&apos;re builders who care about what you&apos;re building.
             </p>
 
             <p
               className="text-base leading-relaxed"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              <strong style={{ color: "var(--astra-2000)" }}>Wedge</strong> is how we deliver that capability. It&apos;s the service arm — the consulting practice that takes what we&apos;ve learned building with AI and applies it to businesses that weren&apos;t born digital. Construction firms. Law practices. Manufacturing companies. Service businesses. Real companies with real operations that AI can make dramatically better.
-            </p>
-
-            <p
-              className="text-base leading-relaxed"
-              style={{ color: "var(--astra-2000-60)" }}
-            >
-              We don&apos;t believe in &ldquo;AI strategy decks.&rdquo; We believe in showing up, understanding your work, and building something that changes how you operate — this week, not next quarter.
+              We don&apos;t believe in &ldquo;AI strategy decks.&rdquo; We believe in shipping. You bring the idea, we bring the infrastructure. Together, we build something real — this week, not next quarter.
             </p>
           </motion.div>
         </div>
@@ -142,15 +136,15 @@ export default function AboutPage() {
               {[
                 {
                   title: "Ship, don't slide.",
-                  text: "Presentations are where ideas go to die. We build working prototypes in the time it takes most consultants to finalize their PowerPoint. You can't evaluate what you can't touch.",
+                  text: "Presentations are where ideas go to die. We build working apps in the time it takes most agencies to finalize their PowerPoint.",
                 },
                 {
-                  title: "Leverage over headcount.",
-                  text: "The answer to 'we need more people' is almost always 'we need better tools.' AI is the biggest force multiplier in business history. Use it.",
+                  title: "Collective over hierarchy.",
+                  text: "We're a creative collective, not a corporation. Everyone builds. Everyone ships. No layers between your idea and the people making it real.",
                 },
                 {
                   title: "Substance over hype.",
-                  text: "We don't talk about AGI or the singularity. We talk about your intake process, your proposal workflow, your reporting pipeline. Real problems. Real solutions. This week.",
+                  text: "We don't talk about AGI or the singularity. We talk about your app, your users, your launch. Real products. Real deployments. This week.",
                 },
               ].map((value, i) => (
                 <motion.div
@@ -199,21 +193,21 @@ export default function AboutPage() {
               color: "var(--astra-2000)",
             }}
           >
-            Ready to find your wedge?
+            Ready to start building?
           </p>
-          <a
-            href="mailto:dean@westernhemlock.com"
+          <Link
+            href="/pricing"
             className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80"
             style={{
               background: "var(--astra-2000)",
               color: "var(--astra-200)",
             }}
           >
-            Get in touch
+            Get Started
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
 

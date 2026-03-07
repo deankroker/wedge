@@ -4,58 +4,69 @@ import { motion } from "framer-motion";
 import SubpageNavbar from "@/components/SubpageNavbar";
 import Footer from "@/components/Footer";
 
-const packages = [
+const tiers = [
   {
-    hours: "5",
-    price: "$3,000",
-    rate: "$600/hr",
-    name: "Starter",
-    description: "Perfect for an initial audit or a focused prototype. Most companies start here to see what's possible before going deeper.",
+    name: "Launch",
+    price: "$500",
+    period: "/mo",
+    commitment: null,
+    description:
+      "Everything you need to start building. Self-service access to the Outpost platform with chat-driven development.",
     includes: [
-      "Workflow audit for one department or process",
-      "1-2 working prototypes",
-      "Written summary with prioritized opportunities",
-      "Follow-up call to discuss next steps",
+      "Up to 2 projects",
+      "Self-service portal at app.outpost.chat",
+      "Chat UI to build & transform your webapp",
+      "GitHub + Vercel deployment included",
+      "Custom domain setup",
+      "Database provisioning",
+      "24-hour SLA on support requests",
     ],
-    cta: "Buy 5 Hours",
-    href: "https://buy.stripe.com/placeholder-5hr",
+    cta: "Get Started",
+    href: "https://app.outpost.chat",
     featured: false,
   },
   {
-    hours: "10",
-    price: "$5,500",
-    rate: "$550/hr",
-    name: "Builder",
-    description: "Enough time to go from audit to working tool. This is where real impact happens — we identify the wedge and drive it home.",
+    name: "Scale",
+    price: "$2,500",
+    period: "/mo",
+    commitment: "6-month commitment",
+    description:
+      "For teams that need more projects and hands-on support from the collective. Own your infrastructure.",
     includes: [
-      "Everything in Starter",
-      "Full design + development of one AI tool",
-      "Integration with one existing system",
-      "Team walkthrough and handoff documentation",
-      "2 weeks post-delivery support",
+      "Everything in Launch",
+      "Up to 5 projects",
+      "5 hours/month hands-on support from the team",
+      "Own your infrastructure",
+      "Access to the full creative collective",
     ],
-    cta: "Buy 10 Hours",
-    href: "https://buy.stripe.com/placeholder-10hr",
+    cta: "Get Started",
+    href: "https://app.outpost.chat",
     featured: true,
   },
   {
-    hours: "20",
-    price: "$10,000",
-    rate: "$500/hr",
-    name: "Accelerator",
-    description: "The full engagement. Multiple tools, deep integration, and team training. This is for companies ready to fundamentally change how they operate.",
+    name: "Custom",
+    price: "Custom",
+    period: null,
+    commitment: null,
+    description:
+      "Custom scope and pricing for larger teams or specialized requirements. Let's design something that fits.",
     includes: [
-      "Everything in Builder",
-      "Multiple AI tools across departments",
-      "Deep integration architecture",
-      "Team training on AI-native workflows",
-      "30 days post-delivery support",
-      "Monthly strategy call for 3 months",
+      "Unlimited projects",
+      "Dedicated team allocation",
+      "Custom integrations & workflows",
+      "SLA customization",
+      "Priority support",
     ],
-    cta: "Buy 20 Hours",
-    href: "https://buy.stripe.com/placeholder-20hr",
+    cta: "Talk to Us",
+    href: "https://calendly.com/placeholder",
     featured: false,
   },
+];
+
+const hourPacks = [
+  { hours: "5", price: "$3,000" },
+  { hours: "10", price: "$5,500" },
+  { hours: "20", price: "$10,000" },
 ];
 
 export default function PricingPage() {
@@ -87,15 +98,15 @@ export default function PricingPage() {
                 lineHeight: 1.05,
               }}
             >
-              Simple. Transparent.
+              Plans that scale
               <br />
-              No surprises.
+              with you.
             </h1>
             <p
               className="mt-6 text-lg leading-relaxed"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              Buy a bucket of hours. We fill them with impact. No retainers, no minimums, no enterprise sales process. Just work.
+              Log in, describe what you want to build, and we ship it. Pick the plan that fits your pace.
             </p>
           </motion.div>
         </div>
@@ -107,9 +118,9 @@ export default function PricingPage() {
           className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-6"
           style={{ maxWidth: "72rem" }}
         >
-          {packages.map((pkg, i) => (
+          {tiers.map((tier, i) => (
             <motion.div
-              key={pkg.name}
+              key={tier.name}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
@@ -121,12 +132,12 @@ export default function PricingPage() {
               className="rounded-xl p-8 flex flex-col"
               style={{
                 background: "var(--astra-0)",
-                border: pkg.featured
+                border: tier.featured
                   ? "2px solid var(--astra-2000)"
                   : "1px solid var(--astra-2000-8)",
               }}
             >
-              {pkg.featured && (
+              {tier.featured && (
                 <span
                   className="text-xs font-mono tracking-widest uppercase mb-4 self-start px-3 py-1 rounded-full"
                   style={{
@@ -146,10 +157,10 @@ export default function PricingPage() {
                   fontWeight: 400,
                 }}
               >
-                {pkg.name}
+                {tier.name}
               </h3>
 
-              <div className="mt-4 flex items-baseline gap-2">
+              <div className="mt-4 flex items-baseline gap-1">
                 <span
                   style={{
                     fontFamily: "var(--nimbus-font-serif)",
@@ -159,32 +170,36 @@ export default function PricingPage() {
                     lineHeight: 1,
                   }}
                 >
-                  {pkg.price}
+                  {tier.price}
                 </span>
-                <span
-                  className="text-sm"
-                  style={{ color: "var(--astra-2000-40)" }}
-                >
-                  / {pkg.hours} hours
-                </span>
+                {tier.period && (
+                  <span
+                    className="text-sm"
+                    style={{ color: "var(--astra-2000-40)" }}
+                  >
+                    {tier.period}
+                  </span>
+                )}
               </div>
 
-              <p
-                className="text-xs mt-1"
-                style={{ color: "var(--astra-2000-40)" }}
-              >
-                {pkg.rate} effective rate
-              </p>
+              {tier.commitment && (
+                <p
+                  className="text-xs mt-1"
+                  style={{ color: "var(--astra-2000-40)" }}
+                >
+                  {tier.commitment}
+                </p>
+              )}
 
               <p
                 className="mt-6 text-sm leading-relaxed flex-grow"
                 style={{ color: "var(--astra-2000-60)" }}
               >
-                {pkg.description}
+                {tier.description}
               </p>
 
               <ul className="mt-6 space-y-2">
-                {pkg.includes.map((item) => (
+                {tier.includes.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-2 text-sm"
@@ -197,14 +212,14 @@ export default function PricingPage() {
               </ul>
 
               <a
-                href={pkg.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={tier.href}
+                target={tier.name === "Custom" ? "_blank" : undefined}
+                rel={tier.name === "Custom" ? "noopener noreferrer" : undefined}
                 className={`mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 ${
-                  pkg.featured ? "" : "border"
+                  tier.featured ? "" : "border"
                 }`}
                 style={
-                  pkg.featured
+                  tier.featured
                     ? {
                         background: "var(--astra-2000)",
                         color: "var(--astra-200)",
@@ -216,7 +231,7 @@ export default function PricingPage() {
                       }
                 }
               >
-                {pkg.cta}
+                {tier.cta}
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -226,19 +241,118 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Custom engagements */}
-      <section className="px-6 pb-20">
-        <div className="mx-auto text-center" style={{ maxWidth: "36rem" }}>
-          <p className="text-lg leading-relaxed" style={{ color: "var(--astra-2000-60)" }}>
-            Need something bigger? Custom engagements available for teams that want to go deep.
-          </p>
-          <a
-            href="mailto:dean@westernhemlock.com?subject=Custom%20Engagement"
-            className="inline-flex items-center gap-2 mt-6 text-sm font-medium transition-opacity hover:opacity-70"
-            style={{ color: "var(--astra-2000)" }}
+      {/* Not ready for a plan? */}
+      <section className="px-6 pb-32">
+        <div className="mx-auto" style={{ maxWidth: "72rem" }}>
+          <motion.div
+            initial={{ opacity: 0, y: 32 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            Talk to us about custom work →
-          </a>
+            <h2
+              className="text-center mb-12"
+              style={{
+                fontFamily: "var(--nimbus-font-serif)",
+                fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
+                color: "var(--astra-2000)",
+                fontWeight: 400,
+              }}
+            >
+              Not ready for a plan?
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Free call */}
+              <div
+                className="rounded-xl p-8"
+                style={{
+                  background: "var(--astra-0)",
+                  border: "1px solid var(--astra-2000-8)",
+                }}
+              >
+                <h3
+                  className="mb-4"
+                  style={{
+                    fontFamily: "var(--nimbus-font-serif)",
+                    fontSize: "1.5rem",
+                    color: "var(--astra-2000)",
+                    fontWeight: 400,
+                  }}
+                >
+                  Book a free 10-min call
+                </h3>
+                <p
+                  className="text-sm leading-relaxed mb-6"
+                  style={{ color: "var(--astra-2000-60)" }}
+                >
+                  Talk to Dean, CEO. No pitch. We&apos;ll listen to what you&apos;re building and tell you honestly if Outpost is the right fit.
+                </p>
+                <a
+                  href="https://calendly.com/placeholder"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 border"
+                  style={{
+                    color: "var(--astra-2000)",
+                    borderColor: "var(--astra-2000-20)",
+                  }}
+                >
+                  Schedule on Calendly
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Hour packs */}
+              <div
+                className="rounded-xl p-8"
+                style={{
+                  background: "var(--astra-0)",
+                  border: "1px solid var(--astra-2000-8)",
+                }}
+              >
+                <h3
+                  className="mb-4"
+                  style={{
+                    fontFamily: "var(--nimbus-font-serif)",
+                    fontSize: "1.5rem",
+                    color: "var(--astra-2000)",
+                    fontWeight: 400,
+                  }}
+                >
+                  Buy a starter engagement
+                </h3>
+                <p
+                  className="text-sm leading-relaxed mb-6"
+                  style={{ color: "var(--astra-2000-60)" }}
+                >
+                  Hour packs for consulting without the app. Skip the subscription — buy hours and we start building.
+                </p>
+                <div className="flex flex-col gap-3">
+                  {hourPacks.map((pack) => (
+                    <a
+                      key={pack.hours}
+                      href={`https://buy.stripe.com/placeholder-${pack.hours}hr`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
+                      style={{
+                        background: "var(--astra-300)",
+                        color: "var(--astra-2000)",
+                      }}
+                    >
+                      <span>{pack.hours} hours</span>
+                      <span style={{ color: "var(--astra-2000-60)" }}>
+                        {pack.price}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
