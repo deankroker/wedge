@@ -24,3 +24,17 @@ export type Provider = {
   response_time_days: number;
   video_links: string[];
 };
+
+export type Engagement = {
+  id: string;
+  created_at: string;
+  plan: "launch" | "scale" | "custom" | "consulting";
+  provider_handle: string | null;
+  hours: number | null;
+  name: string;
+  email: string;
+  company: string | null;
+  projects: { name: string; description: string }[] | null;
+  stripe_payment_intent_id: string | null;
+  status: "pending" | "paid" | "submitted";
+};

@@ -134,7 +134,7 @@ export default function ContactPage() {
               10 minutes. No pitch deck. We listen to what you&apos;re building and tell you honestly if Outpost is the right fit.
             </p>
             <a
-              href="https://calendly.com/placeholder"
+              href="https://calendly.com/deankroker/outpost-intro-call"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 border"
@@ -186,10 +186,8 @@ export default function ContactPage() {
               Hour packs for consulting without the app. Skip the subscription — buy hours and we start building.
             </p>
             <div className="flex flex-col gap-3">
-              <a
-                href="https://buy.stripe.com/placeholder-5hr"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/get-started/consulting?hours=5"
                 className="inline-flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
                 style={{
                   background: "var(--astra-300)",
@@ -198,11 +196,9 @@ export default function ContactPage() {
               >
                 <span>5 hours</span>
                 <span style={{ color: "var(--astra-2000-60)" }}>$3,000</span>
-              </a>
-              <a
-                href="https://buy.stripe.com/placeholder-10hr"
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                href="/get-started/consulting?hours=10"
                 className="inline-flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
                 style={{
                   background: "var(--astra-300)",
@@ -211,11 +207,9 @@ export default function ContactPage() {
               >
                 <span>10 hours</span>
                 <span style={{ color: "var(--astra-2000-60)" }}>$5,500</span>
-              </a>
-              <a
-                href="https://buy.stripe.com/placeholder-20hr"
-                target="_blank"
-                rel="noopener noreferrer"
+              </Link>
+              <Link
+                href="/get-started/consulting?hours=20"
                 className="inline-flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
                 style={{
                   background: "var(--astra-300)",
@@ -224,7 +218,7 @@ export default function ContactPage() {
               >
                 <span>20 hours</span>
                 <span style={{ color: "var(--astra-2000-60)" }}>$10,000</span>
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import SubpageNavbar from "@/components/SubpageNavbar";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const tiers = [
   {
@@ -22,14 +23,14 @@ const tiers = [
       "24-hour SLA on support requests",
     ],
     cta: "Get Started",
-    href: "https://app.outpost.chat",
+    href: "/get-started?plan=launch",
     featured: false,
   },
   {
     name: "Scale",
     price: "$2,500",
     period: "/mo",
-    commitment: "6-month commitment",
+    commitment: null,
     description:
       "For teams that need more projects and hands-on support from the collective. Own your infrastructure.",
     includes: [
@@ -40,7 +41,7 @@ const tiers = [
       "Access to the full creative collective",
     ],
     cta: "Get Started",
-    href: "https://app.outpost.chat",
+    href: "/get-started?plan=scale",
     featured: true,
   },
   {
@@ -211,10 +212,10 @@ export default function PricingPage() {
                 ))}
               </ul>
 
-              <a
+              <Link
                 href={tier.href}
-                target={tier.name === "Custom" ? "_blank" : undefined}
-                rel={tier.name === "Custom" ? "noopener noreferrer" : undefined}
+                target={tier.href.startsWith("/") ? undefined : "_blank"}
+                rel={tier.href.startsWith("/") ? undefined : "noopener noreferrer"}
                 className={`mt-8 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 ${
                   tier.featured ? "" : "border"
                 }`}
@@ -235,7 +236,7 @@ export default function PricingPage() {
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                   <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -289,7 +290,7 @@ export default function PricingPage() {
                   Talk to Dean, CEO. No pitch. We&apos;ll listen to what you&apos;re building and tell you honestly if Outpost is the right fit.
                 </p>
                 <a
-                  href="https://calendly.com/placeholder"
+                  href="https://calendly.com/deankroker/outpost-intro-call"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-80 border"
@@ -332,11 +333,9 @@ export default function PricingPage() {
                 </p>
                 <div className="flex flex-col gap-3">
                   {hourPacks.map((pack) => (
-                    <a
+                    <Link
                       key={pack.hours}
-                      href={`https://buy.stripe.com/placeholder-${pack.hours}hr`}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href={`/get-started/consulting?hours=${pack.hours}`}
                       className="inline-flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:opacity-80"
                       style={{
                         background: "var(--astra-300)",
@@ -347,7 +346,7 @@ export default function PricingPage() {
                       <span style={{ color: "var(--astra-2000-60)" }}>
                         {pack.price}
                       </span>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>

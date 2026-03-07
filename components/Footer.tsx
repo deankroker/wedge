@@ -20,18 +20,18 @@ const columns = [
     ],
   },
   {
-    title: "Legal",
+    title: "Customers",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms", href: "#" },
+      { label: "Login", href: "https://app.outpost.chat/login" },
+      { label: "Insiders", href: "https://app.outpost.chat/" },
     ],
   },
   {
     title: "Follow Us",
     links: [
-      { label: "X (Twitter)", href: "#" },
-      { label: "LinkedIn", href: "#" },
-      { label: "GitHub", href: "#" },
+      { label: "X (Twitter)", href: "https://x.com/outpost_chat" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/company/104468632" },
+      { label: "GitHub", href: "https://github.com/outpost_chat" },
     ],
   },
 ];
@@ -117,14 +117,14 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <Link
-              href="#"
+              href="https://spark.ooo/privacy"
               className="text-xs transition-opacity hover:opacity-70"
               style={{ color: "var(--dark-text-muted)" }}
             >
               Privacy
             </Link>
             <Link
-              href="#"
+              href="https://spark.ooo/terms"
               className="text-xs transition-opacity hover:opacity-70"
               style={{ color: "var(--dark-text-muted)" }}
             >

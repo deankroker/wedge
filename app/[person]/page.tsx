@@ -1,6 +1,7 @@
 import { supabase, type Provider } from "@/lib/supabase";
 import { notFound } from "next/navigation";
 import PersonProfile from "./PersonProfile";
+import type { Metadata } from "next";
 
 async function getProvider(handle: string): Promise<Provider | null> {
   const { data, error } = await supabase
@@ -28,6 +29,42 @@ async function getAllHandles(): Promise<string[]> {
 export async function generateStaticParams() {
   const handles = await getAllHandles();
   return handles.map((handle) => ({ person: handle }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ person: string }>;
+}): Promise<Metadata> {
+  const { person } = await params;
+  const provider = await getProvider(person);
+
+  if (!provider) return {};
+
+  const title = `${provider.name} — Outpost`;
+  const description = provider.details
+    ? `${provider.details.slice(0, 150)}...`
+    : `Work with ${provider.name} on Outpost — ${provider.work_position}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: provider.image_url
+        ? [{ url: provider.image_url }]
+        : [{ url: "/og-image.png" }],
+      siteName: "Outpost",
+      type: "profile",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: provider.image_url ? [provider.image_url] : ["/og-image.png"],
+    },
+  };
 }
 
 export default async function PersonPage({

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import OutpostIcon from "@/components/OutpostIcon";
 
 const navLinks = [
   { label: "Pricing", href: "/pricing" },
@@ -35,6 +36,7 @@ export default function SubpageNavbar() {
         style={{ maxWidth: "var(--page-width)" }}
       >
         <Link href="/" className="flex items-center gap-2 shrink-0">
+          <OutpostIcon size={18} fill="#271a00" />
           <span
             className="text-2xl font-light tracking-tight text-[#271a00]"
             style={{ fontFamily: "var(--nimbus-font-serif)" }}

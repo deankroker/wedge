@@ -5,6 +5,7 @@ import SubpageNavbar from "@/components/SubpageNavbar";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import type { Provider } from "@/lib/supabase";
+import OutpostIcon from "@/components/OutpostIcon";
 
 const fieldColors: Record<string, string> = {
   Design: "#7c3aed",
@@ -20,7 +21,7 @@ const providerLinks: Record<
   { label: string; href: string; style?: "primary" | "secondary" }[]
 > = {
   dean: [
-    { label: "Work with me", href: "https://outpost.chat/dean", style: "primary" },
+    { label: "Work with me", href: "/get-started/dean", style: "primary" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/deankroker/" },
     { label: "The Lab", href: "https://dean.coffee" },
     { label: "Spark Labs", href: "https://spark.ooo" },
@@ -80,13 +81,27 @@ export default function PersonProfile({
             transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {!embed && (
-              <Link
-                href="/team"
-                className="text-xs font-mono tracking-widest uppercase mb-8 inline-block transition-opacity hover:opacity-70"
-                style={{ color: "var(--astra-2000-40)" }}
-              >
-                &larr; TEAM
-              </Link>
+              <div className="flex items-center justify-between mb-8">
+                <Link
+                  href="/team"
+                  className="text-xs font-mono tracking-widest uppercase transition-opacity hover:opacity-70"
+                  style={{ color: "var(--astra-2000-40)" }}
+                >
+                  &larr; TEAM
+                </Link>
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 transition-opacity hover:opacity-70"
+                >
+                  <OutpostIcon size={16} fill="var(--astra-2000)" />
+                  <span
+                    className="text-sm font-medium tracking-tight"
+                    style={{ color: "var(--astra-2000)", fontFamily: "var(--nimbus-font-serif)" }}
+                  >
+                    Outpost
+                  </span>
+                </Link>
+              </div>
             )}
 
             {/* Avatar */}
@@ -182,14 +197,14 @@ export default function PersonProfile({
             )}
 
             {/* Links */}
-            {allLinks.length > 0 && (
+            {allLinks.length > 0 && !embed && (
               <div className="flex flex-wrap items-center gap-3 mt-8">
                 {allLinks.map((link) => (
                   <a
                     key={link.href}
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={link.href.startsWith("/") ? undefined : "_blank"}
+                    rel={link.href.startsWith("/") ? undefined : "noopener noreferrer"}
                     className="text-sm font-medium px-4 py-2 rounded-full transition-colors"
                     style={
                       link.style === "primary"
@@ -208,6 +223,36 @@ export default function PersonProfile({
                 ))}
               </div>
             )}
+
+            {/* Work with CTA */}
+            <Link
+              href={`/get-started/${handle}`}
+              className={`block ${embed ? "mt-10" : "mt-12"} rounded-xl p-8 transition-all duration-200 hover:opacity-90`}
+              style={{
+                background: "var(--astra-2000)",
+                color: "var(--astra-0)",
+              }}
+            >
+              <h3
+                className="mb-2"
+                style={{
+                  fontFamily: "var(--nimbus-font-serif)",
+                  fontSize: "1.5rem",
+                  fontWeight: 400,
+                }}
+              >
+                Work with {provider.name.split(" ")[0]}
+              </h3>
+              <p className="text-sm leading-relaxed opacity-60 mb-4">
+                Scale plan &middot; $2,500/mo &middot; Up to 5 projects
+              </p>
+              <span className="inline-flex items-center gap-2 text-sm font-semibold">
+                Get started
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+            </Link>
           </motion.div>
         </div>
       </section>

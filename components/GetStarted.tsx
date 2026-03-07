@@ -90,7 +90,7 @@ export default function GetStarted() {
 
             {/* Tier 2: Book a call */}
             <a
-              href="https://calendly.com/placeholder"
+              href="https://calendly.com/deankroker/outpost-intro-call"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full text-base font-semibold transition-all duration-200 hover:opacity-80 border"
