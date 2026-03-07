@@ -83,14 +83,40 @@ export default function PersonProfile({
             {!embed && (
               <div className="flex items-center justify-between mb-8">
                 <Link
-                  href="/team"
+                  href="/collective"
                   className="text-xs font-mono tracking-widest uppercase transition-opacity hover:opacity-70"
                   style={{ color: "var(--astra-2000-40)" }}
                 >
-                  &larr; TEAM
+                  &larr; COLLECTIVE
                 </Link>
-                <Link
-                  href="/"
+              </div>
+            )}
+
+            {/* Avatar + Outpost icon (embed only) */}
+            <div className="flex items-start justify-between mb-8">
+              <div
+                className="w-24 h-24 rounded-full overflow-hidden flex items-center justify-center text-3xl font-light"
+                style={{
+                  background: "var(--astra-300)",
+                  color: "var(--astra-2000-40)",
+                  fontFamily: "var(--nimbus-font-serif)",
+                }}
+              >
+              {provider.image_url ? (
+                <img
+                  src={provider.image_url}
+                  alt={provider.name}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                provider.name[0]
+              )}
+              </div>
+              {embed && (
+                <a
+                  href="https://outpost.chat"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 transition-opacity hover:opacity-70"
                 >
                   <OutpostIcon size={16} fill="var(--astra-2000)" />
@@ -100,27 +126,7 @@ export default function PersonProfile({
                   >
                     Outpost
                   </span>
-                </Link>
-              </div>
-            )}
-
-            {/* Avatar */}
-            <div
-              className="w-24 h-24 rounded-full mb-8 overflow-hidden flex items-center justify-center text-3xl font-light"
-              style={{
-                background: "var(--astra-300)",
-                color: "var(--astra-2000-40)",
-                fontFamily: "var(--nimbus-font-serif)",
-              }}
-            >
-              {provider.image_url ? (
-                <img
-                  src={provider.image_url}
-                  alt={provider.name}
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                provider.name[0]
+                </a>
               )}
             </div>
 
@@ -172,10 +178,10 @@ export default function PersonProfile({
 
             {provider.details && (
               <p
-                className="text-lg leading-relaxed mb-8"
+                className="text-lg leading-relaxed mb-8 whitespace-pre-line"
                 style={{ color: "var(--astra-2000-60)" }}
               >
-                {provider.details}
+                {provider.details.replace(/\\n/g, "\n")}
               </p>
             )}
 
@@ -188,10 +194,10 @@ export default function PersonProfile({
                   What to expect
                 </h2>
                 <p
-                  className="text-base leading-relaxed"
+                  className="text-base leading-relaxed whitespace-pre-line"
                   style={{ color: "var(--astra-2000-60)" }}
                 >
-                  {provider.what_to_expect}
+                  {provider.what_to_expect.replace(/\\n/g, "\n")}
                 </p>
               </div>
             )}

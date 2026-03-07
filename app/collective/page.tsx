@@ -33,7 +33,7 @@ export default async function TeamPage() {
               className="text-xs font-mono tracking-[0.3em] uppercase mb-6"
               style={{ color: "var(--astra-2000-60)" }}
             >
-              TEAM
+              COLLECTIVE
             </p>
             <h1
               style={{
@@ -51,7 +51,7 @@ export default async function TeamPage() {
               className="mt-6 text-lg md:text-xl leading-relaxed"
               style={{ color: "var(--astra-2000-60)", maxWidth: "36rem" }}
             >
-              {providers.length} experts across design, engineering, product, and
+              Experts across design, engineering, product, and
               more — ready to help you level up.
             </p>
           </div>

@@ -7,7 +7,7 @@ import OutpostIcon from "@/components/OutpostIcon";
 const navLinks = [
   { label: "Pricing", href: "/pricing" },
   { label: "How It Works", href: "/services" },
-  { label: "Team", href: "/team" },
+  { label: "Collective", href: "/collective" },
   { label: "About", href: "/about" },
 ];
 

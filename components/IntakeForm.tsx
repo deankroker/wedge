@@ -146,7 +146,7 @@ function PaymentForm({
       {isConsulting && providers && providers.length > 0 && (
         <div>
           <p className="text-xs font-mono tracking-widest uppercase mb-3" style={{ color: "var(--astra-2000-40)" }}>
-            Our team
+            Our collective
           </p>
           <div className="flex -space-x-2">
             {providers.map((p) => (

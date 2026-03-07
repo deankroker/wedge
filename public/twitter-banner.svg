@@ -1,0 +1,29 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: dark matching Umbra palette -->
+  <rect width="1500" height="500" fill="#000000"/>
+
+  <!-- Subtle radial glow -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="60%">
+    <stop offset="0%" stop-color="#1E1D1C"/>
+    <stop offset="100%" stop-color="#000000"/>
+  </radialGradient>
+  <rect width="1500" height="500" fill="url(#glow)"/>
+
+  <!-- Accent line top -->
+  <rect x="0" y="0" width="1500" height="2" fill="#D6D5D4" opacity="0.12"/>
+
+  <!-- Op logomark: circle -->
+  <circle cx="670" cy="220" r="44" fill="#D6D5D4"/>
+
+  <!-- Op logomark: p letter -->
+  <text x="726" y="260" font-family="Georgia, serif" font-size="100" font-weight="400" fill="#D6D5D4">p</text>
+
+  <!-- Tagline -->
+  <text x="750" y="340" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="28" fill="#D6D5D499" text-anchor="middle">Build your app with AI</text>
+
+  <!-- URL -->
+  <text x="750" y="440" font-family="monospace" font-size="16" fill="#D6D5D466" text-anchor="middle" letter-spacing="2">outpost.chat</text>
+
+  <!-- Accent line bottom -->
+  <rect x="0" y="498" width="1500" height="2" fill="#D6D5D4" opacity="0.12"/>
+</svg>
