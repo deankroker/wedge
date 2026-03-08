@@ -46,9 +46,11 @@ function EmbedFooter() {
 
 export default function PersonProfile({
   provider,
+  otherProviders = [],
   embed = false,
 }: {
   provider: Provider;
+  otherProviders?: Provider[];
   embed?: boolean;
 }) {
   const handle = provider.handle.toLowerCase();
@@ -262,6 +264,86 @@ export default function PersonProfile({
           </motion.div>
         </div>
       </section>
+
+      {/* More from the Collective */}
+      {!embed && otherProviders.length > 0 && (
+        <section className="pb-20 px-6">
+          <div className="mx-auto" style={{ maxWidth: "48rem" }}>
+            <h2
+              className="text-xs font-mono tracking-widest uppercase mb-6"
+              style={{ color: "var(--astra-2000-40)" }}
+            >
+              More from the Collective
+            </h2>
+          </div>
+          <div
+            className="flex gap-4 overflow-x-auto pb-4 px-6 -mx-6 scrollbar-hide"
+            style={{
+              scrollbarWidth: "none",
+              msOverflowStyle: "none",
+            }}
+          >
+            {/* left spacer to align with content */}
+            <div className="shrink-0" style={{ width: "max(0px, calc((100% - 48rem) / 2 - 1.5rem))" }} />
+            {otherProviders.map((p) => (
+              <Link
+                key={p.handle}
+                href={`/${p.handle.toLowerCase()}`}
+                className="shrink-0 rounded-xl p-5 transition-all duration-200 hover:opacity-80"
+                style={{
+                  background: "var(--astra-300)",
+                  width: "14rem",
+                }}
+              >
+                <div
+                  className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center text-lg font-light mb-3"
+                  style={{
+                    background: "var(--astra-400, var(--astra-200))",
+                    color: "var(--astra-2000-40)",
+                    fontFamily: "var(--nimbus-font-serif)",
+                  }}
+                >
+                  {p.image_url ? (
+                    <img
+                      src={p.image_url}
+                      alt={p.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    p.name[0]
+                  )}
+                </div>
+                <p
+                  className="text-sm font-medium mb-0.5 truncate"
+                  style={{
+                    color: "var(--astra-2000)",
+                    fontFamily: "var(--nimbus-font-serif)",
+                  }}
+                >
+                  {p.name}
+                </p>
+                <p
+                  className="text-xs truncate mb-2"
+                  style={{ color: "var(--astra-2000-40)" }}
+                >
+                  {p.work_position}
+                </p>
+                <span
+                  className="text-[10px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full"
+                  style={{
+                    background: `${fieldColors[p.primary_field] ?? "#6b7280"}15`,
+                    color: fieldColors[p.primary_field] ?? "#6b7280",
+                  }}
+                >
+                  {p.primary_field}
+                </span>
+              </Link>
+            ))}
+            {/* right spacer */}
+            <div className="shrink-0 w-6" />
+          </div>
+        </section>
+      )}
 
       {embed ? <EmbedFooter /> : <Footer />}
     </main>

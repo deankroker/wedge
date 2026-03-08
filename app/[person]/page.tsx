@@ -16,6 +16,18 @@ async function getProvider(handle: string): Promise<Provider | null> {
   );
 }
 
+async function getProviders(): Promise<Provider[]> {
+  const { data, error } = await supabase
+    .from("providers")
+    .select("*")
+    .eq("is_hidden", false)
+    .eq("is_active", true)
+    .order("reviews", { ascending: false });
+
+  if (error) return [];
+  return data ?? [];
+}
+
 async function getAllHandles(): Promise<string[]> {
   const { data } = await supabase
     .from("providers")
@@ -76,11 +88,24 @@ export default async function PersonPage({
 }) {
   const { person } = await params;
   const { embed } = await searchParams;
-  const provider = await getProvider(person);
+  const [provider, allProviders] = await Promise.all([
+    getProvider(person),
+    getProviders(),
+  ]);
 
   if (!provider) {
     notFound();
   }
 
-  return <PersonProfile provider={provider} embed={embed === "1"} />;
+  const otherProviders = allProviders.filter(
+    (p) => p.handle.toLowerCase() !== person.toLowerCase()
+  );
+
+  return (
+    <PersonProfile
+      provider={provider}
+      otherProviders={otherProviders}
+      embed={embed === "1"}
+    />
+  );
 }
