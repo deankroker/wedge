@@ -28,6 +28,30 @@ const providerLinks: Record<
   ],
 };
 
+// Handles that get a FOUNDER badge
+const founderHandles = new Set(["dean"]);
+
+function Badge({
+  label,
+  color,
+  bg,
+  border,
+}: {
+  label: string;
+  color: string;
+  bg: string;
+  border?: string;
+}) {
+  return (
+    <span
+      className="text-[10px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full"
+      style={{ background: bg, color, border }}
+    >
+      {label}
+    </span>
+  );
+}
+
 function EmbedFooter() {
   return (
     <footer className="py-8 px-6 text-center">
@@ -153,15 +177,19 @@ export default function PersonProfile({
             </p>
 
             <div className="flex items-center gap-3 mb-8">
-              <span
-                className="text-[10px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full"
-                style={{
-                  background: `${fieldColors[provider.primary_field] ?? "#6b7280"}15`,
-                  color: fieldColors[provider.primary_field] ?? "#6b7280",
-                }}
-              >
-                {provider.primary_field}
-              </span>
+              {founderHandles.has(handle) && (
+                <Badge
+                  label="FOUNDER"
+                  bg="var(--astra-2000-8)"
+                  color="var(--astra-2000)"
+                  border="1px solid var(--astra-2000-12)"
+                />
+              )}
+              <Badge
+                label={provider.primary_field}
+                bg={`${fieldColors[provider.primary_field] ?? "#6b7280"}15`}
+                color={fieldColors[provider.primary_field] ?? "#6b7280"}
+              />
               {provider.reviews > 0 && (
                 <span
                   className="text-xs"
@@ -328,15 +356,11 @@ export default function PersonProfile({
                 >
                   {p.work_position}
                 </p>
-                <span
-                  className="text-[10px] font-mono tracking-wider uppercase px-2 py-0.5 rounded-full"
-                  style={{
-                    background: `${fieldColors[p.primary_field] ?? "#6b7280"}15`,
-                    color: fieldColors[p.primary_field] ?? "#6b7280",
-                  }}
-                >
-                  {p.primary_field}
-                </span>
+                <Badge
+                  label={p.primary_field}
+                  bg={`${fieldColors[p.primary_field] ?? "#6b7280"}15`}
+                  color={fieldColors[p.primary_field] ?? "#6b7280"}
+                />
               </Link>
             ))}
             {/* right spacer */}
